@@ -1,0 +1,21 @@
+:root {
+    --color-1: #30cfd0;
+    --color-1-darker-40: #30cfd0;
+    --color-2: #330867;
+    --color-2-darker-40: #330867;
+    --color-2-darker-50: #330867;
+    --mark-color: var(--color-1);
+}
+
+/*Light theme -> black text instead of white text in feature box*/
+
+.feature-box-1:hover {
+    color: #090a0c;
+}
+.feature-box-1:hover .icon {
+    border-color: #090a0c;
+    color: #090a0c; }
+.feature-box-1:hover h5 {
+    color: #090a0c; }
+.feature-box-1:hover p {
+    color: #000000; }

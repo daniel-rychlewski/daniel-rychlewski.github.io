@@ -1,0 +1,596 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<stati18n>
+
+	<host>
+		<name>http://www.danielrychlewski.com</name>
+	</host>
+
+    <file>
+        <name>stati18n</name>
+        <minified>true</minified>
+    </file>
+
+    <language>
+        <!-- Chapter links -->
+        <text id="chapter-link-home">
+            <translation lang='en'>Home</translation>
+            <translation lang='de'>Startseite</translation>
+            <translation lang='pl'>Strona główna</translation>
+        </text>
+        <text id="chapter-link-about-me">
+            <translation lang='en'>About me</translation>
+            <translation lang='de'>Über mich</translation>
+            <translation lang='pl'>O mnie</translation>
+        </text>
+        <text id="chapter-link-skills">
+            <translation lang='en'>Skills</translation>
+            <translation lang='de'>Kenntnisse</translation>
+            <translation lang='pl'>Umiejętności</translation>
+        </text>
+        <text id="chapter-link-services">
+            <translation lang='en'>Services</translation>
+            <translation lang='de'>Angebot</translation>
+            <translation lang='pl'>Serwisy</translation>
+        </text>
+        <text id="chapter-link-portfolio">
+            <translation lang='en'>Portfolio</translation>
+            <translation lang='de'>Projekte</translation>
+            <translation lang='pl'>Portfolio</translation>
+        </text>
+        <text id="chapter-link-certificates">
+            <translation lang='en'>Certificates</translation>
+            <translation lang='de'>Zertifikate</translation>
+            <translation lang='pl'>Certyfikaty</translation>
+        </text>
+        <text id="chapter-link-blog">
+            <translation lang='en'>Blog</translation>
+            <translation lang='de'>Blog</translation>
+            <translation lang='pl'>Blog</translation>
+        </text>
+        <text id="chapter-link-contact">
+            <translation lang='en'>Contact</translation>
+            <translation lang='de'>Kontakt</translation>
+            <translation lang='pl'>Kontakt</translation>
+        </text>
+        <text id="chapter-link-language">
+            <translation lang='en'>Language</translation>
+            <translation lang='de'>Sprache</translation>
+            <translation lang='pl'>Język</translation>
+        </text>
+        <text id="chapter-link-color">
+            <translation lang='en'>Color</translation>
+            <translation lang='de'>Farbe</translation>
+            <translation lang='pl'>Kolor</translation>
+        </text>
+
+        <!-- Chapter names -->
+        <text id="chapter-name-welcome">
+            <translation lang='en'>Welcome, my name is</translation>
+            <translation lang='de'>Herzlich Willkommen, ich heiße</translation>
+            <translation lang='pl'>Witam serdecznie, nazywam się</translation>
+        </text>
+        <text id="chapter-name-about-me">
+            <translation lang='en'>About me</translation>
+            <translation lang='de'>Über mich</translation>
+            <translation lang='pl'>O mnie</translation>
+        </text>
+        <text id="chapter-name-my-skills">
+            <translation lang='en'>My skills</translation>
+            <translation lang='de'>Meine Kenntnisse</translation>
+            <translation lang='pl'>Moje umiejętności</translation>
+        </text>
+        <text id="chapter-name-my-services">
+            <translation lang='en'>My services</translation>
+            <translation lang='de'>Mein Angebot</translation>
+            <translation lang='pl'>Moje serwisy</translation>
+        </text>
+        <text id="chapter-name-portfolio">
+            <translation lang='en'>Portfolio</translation>
+            <translation lang='de'>Projekte</translation>
+            <translation lang='pl'>Portfolio</translation>
+        </text>
+        <text id="chapter-name-certificates">
+            <translation lang='en'>Certificates</translation>
+            <translation lang='de'>Zertifikate</translation>
+            <translation lang='pl'>Certyfikaty</translation>
+        </text>
+        <text id="chapter-name-blog">
+            <translation lang='en'>Blog</translation>
+            <translation lang='de'>Blog</translation>
+            <translation lang='pl'>Blog</translation>
+        </text>
+        <text id="chapter-name-get-in-touch">
+            <translation lang='en'>Get in touch</translation>
+            <translation lang='de'>Kontakt</translation>
+            <translation lang='pl'>Kontakt</translation>
+        </text>
+
+        <text id="start-my-work">
+            <translation lang='en'>My work</translation>
+            <translation lang='de'>Meine Projekte</translation>
+            <translation lang='pl'>Moje projekty</translation>
+        </text>
+        <text id="start-hire-me">
+            <translation lang='en'>Hire me</translation>
+            <translation lang='de'>Kontakt</translation>
+            <translation lang='pl'>Zatrudnij mnie</translation>
+        </text>
+
+        <text id="about-me-birthday-key">
+            <translation lang='en'>Birthday</translation>
+            <translation lang='de'>Geburtstag</translation>
+            <translation lang='pl'>Urodziny</translation>
+        </text>
+        <text id="about-me-birthday-value">
+            <translation lang='en'>February 27, 1997</translation>
+            <translation lang='de'>27.02.1997</translation>
+            <translation lang='pl'>27 lutego 1997</translation>
+        </text>
+        <text id="about-me-age-key">
+            <translation lang='en'>Age</translation>
+            <translation lang='de'>Alter</translation>
+            <translation lang='pl'>Wiek</translation>
+        </text>
+        <text id="about-me-residence-key">
+            <translation lang='en'>Residence</translation>
+            <translation lang='de'>Wohnort</translation>
+            <translation lang='pl'>Miejsce zamieszkania</translation>
+        </text>
+        <text id="about-me-residence-value">
+            <translation lang='en'>Switzerland</translation>
+            <translation lang='de'>Schweiz</translation>
+            <translation lang='pl'>Szwajcaria</translation>
+        </text>
+        <text id="about-me-permit-key">
+            <translation lang='en'>Work permit</translation>
+            <translation lang='de'>Bewilligung</translation>
+            <translation lang='pl'>Zezwolenie na pracę</translation>
+        </text>
+        <text id="about-me-permit-value">
+            <translation lang='en'>B</translation>
+            <translation lang='de'>B</translation>
+            <translation lang='pl'>B</translation>
+        </text>
+        <text id="about-me-citizenships-key">
+            <translation lang='en'>Citizenships</translation>
+            <translation lang='de'>Staatsbürger-schaften</translation>
+            <translation lang='pl'>Obywatelstwa</translation>
+        </text>
+        <text id="about-me-citizenships-value">
+            <translation lang='en'>Germany, Poland</translation>
+            <translation lang='de'>Deutschland, Polen</translation>
+            <translation lang='pl'>Niemcy, Polska</translation>
+        </text>
+        <text id="about-me-education-key">
+            <translation lang='en'>Education</translation>
+            <translation lang='de'>Bildung</translation>
+            <translation lang='pl'>Edukacja</translation>
+        </text>
+        <text id="about-me-education-value">
+            <translation lang='en'>M.Sc. Computer Science</translation>
+            <translation lang='de'>M.Sc. Informatik</translation>
+            <translation lang='pl'>M.Sc. w informatyce</translation>
+        </text>
+        <text id="about-me-university-key">
+            <translation lang='en'>University</translation>
+            <translation lang='de'>Hochschule</translation>
+            <translation lang='pl'>Uczelnia</translation>
+        </text>
+        <text id="about-me-university-value">
+            <translation lang='en'>Humboldt University of Berlin</translation>
+            <translation lang='de'>Humboldt-Universität zu Berlin</translation>
+            <translation lang='pl'>Uniwersytet Humboldta w Berlinie</translation>
+        </text>
+
+        <text id="about-me-button-resume">
+            <translation lang='en'>Resume</translation>
+            <translation lang='de'>Resume (Englisch)</translation>
+            <translation lang='pl'>CV (angielski)</translation>
+        </text>
+        <text id="about-me-button-cv">
+            <translation lang='en'>CV (German)</translation>
+            <translation lang='de'>Lebenslauf</translation>
+            <translation lang='pl'>Życiorys (niemiecki)</translation>
+        </text>
+        <text id="about-me-button-certificates">
+            <translation lang='en'>Certificates</translation>
+            <translation lang='de'>Zertifikate</translation>
+            <translation lang='pl'>Certyfikaty</translation>
+        </text>
+        <text id="about-me-button-diploma">
+            <translation lang='en'>Diploma</translation>
+            <translation lang='de'>Diplome</translation>
+            <translation lang='pl'>Dyplomy</translation>
+        </text>
+
+        <text id="skills-expand-info">
+            <translation lang='en'>Please expand a skill category to see the skills and hover over a skill name for occasionally displayed additional information. For mobile platforms, you can press and hold a skill.</translation>
+            <translation lang='de'>Bitte öffnen Sie die passende Kategorie und bewegen die Maus über die Kenntnis für womöglich hinterlegte Zusatzinformationen. Auf mobilen Plattformen können Sie zu diesem Zweck die Kenntnis gedrückt halten.</translation>
+            <translation lang='pl'>Proszę otworzyć odpowiednią kategorie i zatrymać się myszką nad umiejętnością, aby mogły się pojawić dodatkowe informacje. Na platformach mobilnych można do tego nacisnąć i przytrzymać umiejętność.</translation>
+        </text>
+        <text id="skills-expand">
+            <translation lang='en'>Expand all</translation>
+            <translation lang='de'>Alle öffnen</translation>
+            <translation lang='pl'>Otwórz wszystkie</translation>
+        </text>
+        <text id="skills-collapse">
+            <translation lang='en'>Collapse all</translation>
+            <translation lang='de'>Alle schließen</translation>
+            <translation lang='pl'>Zamknij wszystkie</translation>
+        </text>
+        <text id="skills-csv">
+            <translation lang='en'>Display as CSV</translation>
+            <translation lang='de'>Als CSV anzeigen</translation>
+            <translation lang='pl'>Wyświetl jako CSV</translation>
+        </text>
+        <text id="copy-skills">
+            <translation lang='en'>Copy skills to clipboard</translation>
+            <translation lang='de'>Kenntnisse in die Zwischenablage kopieren</translation>
+            <translation lang='pl'>Skopiuj umiejętności do schowka</translation>
+        </text>
+
+        <!-- Skills headings -->
+		<text id="skills-heading-programming-languages">
+            <translation lang='en'>Programming languages</translation>
+            <translation lang='de'>Programmiersprachen</translation>
+            <translation lang='pl'>Języki programowania</translation>
+        </text>
+        <text id="skills-heading-databases">
+            <translation lang='en'>Databases</translation>
+            <translation lang='de'>Datenbanken</translation>
+            <translation lang='pl'>Bazy danych</translation>
+        </text>
+        <text id="skills-heading-frameworks">
+            <translation lang='en'>Frameworks</translation>
+            <translation lang='de'>Frameworks</translation>
+            <translation lang='pl'>Frameworki</translation>
+        </text>
+        <text id="skills-heading-deep-learning">
+            <translation lang='en'>Deep learning</translation>
+            <translation lang='de'>Deep Learning</translation>
+            <translation lang='pl'>Deep learning</translation>
+        </text>
+        <text id="skills-heading-project-management">
+            <translation lang='en'>Project management</translation>
+            <translation lang='de'>Projektmanagement</translation>
+            <translation lang='pl'>Zarządzanie projektami</translation>
+        </text>
+        <text id="skills-heading-software-development">
+            <translation lang='en'>Software development</translation>
+            <translation lang='de'>Softwareentwicklung</translation>
+            <translation lang='pl'>Opracowywanie oprogramowania</translation>
+        </text>
+        <text id="skills-heading-ci-cd">
+            <translation lang='en'>CI/CD</translation>
+            <translation lang='de'>CI/CD</translation>
+            <translation lang='pl'>CI/CD</translation>
+        </text>
+        <text id="skills-heading-performance">
+            <translation lang='en'>Performance</translation>
+            <translation lang='de'>Performance</translation>
+            <translation lang='pl'>Wydajność</translation>
+        </text>
+        <text id="skills-heading-architecture">
+            <translation lang='en'>Architecture</translation>
+            <translation lang='de'>Architektur</translation>
+            <translation lang='pl'>Architektura</translation>
+        </text>
+        <text id="skills-heading-virtualization">
+            <translation lang='en'>Virtualization</translation>
+            <translation lang='de'>Virtualisierung</translation>
+            <translation lang='pl'>Wirtualizacja</translation>
+        </text>
+        <text id="skills-heading-modeling">
+            <translation lang='en'>Modeling</translation>
+            <translation lang='de'>Modellierung</translation>
+            <translation lang='pl'>Modelowanie</translation>
+        </text>
+        <text id="skills-heading-network">
+            <translation lang='en'>Network</translation>
+            <translation lang='de'>Netzwerk</translation>
+            <translation lang='pl'>Sieć</translation>
+        </text>
+        <text id="skills-heading-ides">
+            <translation lang='en'>IDEs</translation>
+            <translation lang='de'>Entwicklungsumgebungen</translation>
+            <translation lang='pl'>Zintegrowane środowiska programistyczne</translation>
+        </text>
+        <text id="skills-heading-testing">
+            <translation lang='en'>Testing</translation>
+            <translation lang='de'>Testing</translation>
+            <translation lang='pl'>Testowanie</translation>
+        </text>
+        <text id="skills-heading-version-control">
+            <translation lang='en'>Version control</translation>
+            <translation lang='de'>Versionsverwaltung</translation>
+            <translation lang='pl'>Systemy kontroli wersji</translation>
+        </text>
+        <text id="skills-heading-cloud">
+            <translation lang='en'>Cloud</translation>
+            <translation lang='de'>Cloud</translation>
+            <translation lang='pl'>Systemy chmury</translation>
+        </text>
+        <text id="skills-heading-visualization">
+            <translation lang='en'>Visualization</translation>
+            <translation lang='de'>Visualisierung</translation>
+            <translation lang='pl'>Wizualizacja</translation>
+        </text>
+        <text id="skills-heading-image-processing">
+            <translation lang='en'>Image processing</translation>
+            <translation lang='de'>Bildverarbeitung</translation>
+            <translation lang='pl'>Przetwarzanie obrazu</translation>
+        </text>
+        <text id="skills-heading-data-transfer">
+            <translation lang='en'>Data transfer</translation>
+            <translation lang='de'>Datenübertragung</translation>
+            <translation lang='pl'>Transfer danych</translation>
+        </text>
+        <text id="skills-heading-file-hosting">
+            <translation lang='en'>File hosting</translation>
+            <translation lang='de'>Filehosting</translation>
+            <translation lang='pl'>Hostowanie plików</translation>
+        </text>
+        <text id="skills-heading-communication">
+            <translation lang='en'>Communication</translation>
+            <translation lang='de'>Kommunikation</translation>
+            <translation lang='pl'>Komunikacja</translation>
+        </text>
+        <text id="skills-heading-remote-maintenance">
+            <translation lang='en'>Remote maintenance</translation>
+            <translation lang='de'>Fernwartung</translation>
+            <translation lang='pl'>Zdalne sterowanie</translation>
+        </text>
+        <text id="skills-heading-specification">
+            <translation lang='en'>Specification</translation>
+            <translation lang='de'>Spezifikation</translation>
+            <translation lang='pl'>Specyfikacja</translation>
+        </text>
+        <text id="skills-heading-office-solutions">
+            <translation lang='en'>Office solutions</translation>
+            <translation lang='de'>Office-Lösungen</translation>
+            <translation lang='pl'>Rozwiązania Office</translation>
+        </text>
+
+        <!-- Service headings -->
+        <text id="service-1-head">
+            <translation lang='en'>Technical Know-How</translation>
+            <translation lang='de'>Technisches Know-how</translation>
+            <translation lang='pl'>Wiedza techniczna</translation>
+        </text>
+        <text id="service-2-head">
+            <translation lang='en'>Comprehensive Testing</translation>
+            <translation lang='de'>Umfassendes Testen</translation>
+            <translation lang='pl'>Kompleksowe testowanie</translation>
+        </text>
+        <text id="service-3-head">
+            <translation lang='en'>Fast Pace</translation>
+            <translation lang='de'>Schneller Fortschritt</translation>
+            <translation lang='pl'>Szybkie tempo</translation>
+        </text>
+        <text id="service-4-head">
+            <translation lang='en'>Continuous Feedback</translation>
+            <translation lang='de'>Kontinuierliches Feedback</translation>
+            <translation lang='pl'>Ciągłe uzyskiwanie opinii</translation>
+        </text>
+        <text id="service-5-head">
+            <translation lang='en'>Life-Long Learning</translation>
+            <translation lang='de'>Lebenslanges Lernen</translation>
+            <translation lang='pl'>Uczenie się przez całe życie</translation>
+        </text>
+        <text id="service-6-head">
+            <translation lang='en'>Easy to Understand</translation>
+            <translation lang='de'>Leicht verständlich</translation>
+            <translation lang='pl'>Łatwo do zrozumienia</translation>
+        </text>
+
+        <text id="projects-filter-all">
+            <translation lang='en'>All</translation>
+            <translation lang='de'>Alle</translation>
+            <translation lang='pl'>Wszystkie</translation>
+        </text>
+        <text id="projects-filter-website">
+            <translation lang='en'>Website / Extensions</translation>
+            <translation lang='de'>Webseite / Erweiterungen</translation>
+            <translation lang='pl'>Strony / rozszerzenia</translation>
+        </text>
+        <text id="projects-filter-deep-learning">
+            <translation lang='en'>Deep Learning / ML / RL / ES</translation>
+            <translation lang='de'>Deep Learning / ML / RL / ES</translation>
+            <translation lang='pl'>Deep learning / ML / RL / ES</translation>
+        </text>
+        <text id="projects-filter-iot">
+            <translation lang='en'>IoT / Smart Home</translation>
+            <translation lang='de'>IoT / Smart Home</translation>
+            <translation lang='pl'>IoT / inteligentny dom</translation>
+        </text>
+        <text id="projects-filter-games">
+            <translation lang='en'>Games / Entertainment</translation>
+            <translation lang='de'>Spiele / Unterhaltung</translation>
+            <translation lang='pl'>Gry / rozrywka</translation>
+        </text>
+
+        <text id="skill-java">
+            <translation lang='en'>OCP- and OCA-certified Java 8 programmer</translation>
+            <translation lang='de'>OCP- und OCA-zertifizierter Java-8-Programmierer</translation>
+            <translation lang='pl'>Certyfikowany programista Java 8 (OCP, OCA)</translation>
+        </text>
+        <text id="skill-python">
+            <translation lang='en'>PCAP-certified</translation>
+            <translation lang='de'>PCAP-zertifiziert</translation>
+            <translation lang='pl'>Certyfikat PCAP</translation>
+        </text>
+        <text id="git-certificate">
+            <translation lang='en'>bbv Academy certificate "Distributed Version Control with Git"</translation>
+            <translation lang='de'>bbv Academy-Zertifikat "Distributed Version Control mit Git"</translation>
+            <translation lang='pl'>Certyfikat bbv Academy "Rozproszone systemy kontroli wersji z Gitem"</translation>
+        </text>
+        <text id="skill-csm">
+            <translation lang='en'>Certified ScrumMaster</translation>
+            <translation lang='de'>Certified ScrumMaster</translation>
+            <translation lang='pl'>Certyfikowany ScrumMaster</translation>
+        </text>
+
+        <text id="certificate-aws-2020">
+            <translation lang='en'>AWS Summit 2020 Certificate of Attendance</translation>
+            <translation lang='de'>AWS Summit 2020 Teilnahmezertifikat</translation>
+            <translation lang='pl'>AWS Summit 2020 certyfikat uczestnictwa</translation>
+        </text>
+        <text id="certificate-aws-2020-description">
+            <translation lang='en'>Includes full-stack mobile and web development with AWS Amplify, application integration patterns for microservices and event-driven architecture</translation>
+            <translation lang='de'>u.a. Full-Stack Mobile- und Web-Development mit AWS und Amplify, Integrationsmuster zur Anwendungsintegration für Microservices und ereignisgesteuerte Architektur</translation>
+            <translation lang='pl'>Między innymi: programowanie full-stack z AWS i Amplify, struktury integracji aplikacji dla mikroserwisów i architektura zdarzeniowa</translation>
+        </text>
+        <text id="certificate-git">
+            <translation lang='en'>Distributed Version Control with Git</translation>
+            <translation lang='de'>Distributed Version Control mit Git</translation>
+            <translation lang='pl'>Rozproszone systemy kontroli wersji z Gitem</translation>
+        </text>
+        <text id="certificate-git-description">
+            <translation lang='en'>Theory of Distributed Version Control, Local Versioning, Working with Branches, Distributed Working with a Remote Repository</translation>
+            <translation lang='de'>Theorie Distributed Version Control, Lokale Versionierung, Arbeiten mit Branches, verteilt arbeiten mit entferntem Repository</translation>
+            <translation lang='pl'>Teoria rozproszonych i lokalnych systemów kontroli wersji, pracowanie z gałęziami, rozproszona praca ze zdalnym repozytorium</translation>
+        </text>
+        <text id="certificate-csm">
+            <translation lang='en'>Certified ScrumMaster</translation>
+            <translation lang='de'>Certified ScrumMaster</translation>
+            <translation lang='pl'>Certyfikowany ScrumMaster</translation>
+        </text>
+        <text id="certificate-csm-description">
+            <translation lang='en'>Adherence to Scrum as defined in Scrum Guide, facilitation and maintenance of Scrum events, removal of team and organizational impediments</translation>
+            <translation lang='de'>Durchführung von Scrum wie im Scrum Guide definiert, Vereinfachung von Aufrechterhaltung von Scrum-Events, Ausräumen organisatorischer sowie Team-Hindernisse</translation>
+            <translation lang='pl'>Przestrzeganie Scrum tak jak określony w Scrum Guide, ułatwienie i utrzymanie zdarzeń Scrum, usunięcie przeszkód organizacyjnych i dla zespołu</translation>
+        </text>
+        <text id="certificate-oci">
+            <translation lang='en'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
+            <translation lang='de'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
+            <translation lang='pl'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
+        </text>
+        <text id="certificate-oci-description">
+            <translation lang='en'>Cloud Concepts, OCI Architecture, Compute Services, Storage Services, Networking Services, IAM, Database Services, Security, Pricing and Billing, SLA and Support</translation>
+            <translation lang='de'>Cloud-Konzepte, OCI-Architektur, Compute-Services, Storage-Services, Netzwerk-Services, IAM, Datenbank-Services, Security, Preisgestaltung und Abrechnung, SLA und Support</translation>
+            <translation lang='pl'>Koncepcje chmury, architektura OCI, serwisy Compute, Storage, Networking, IAM, serwisy baz danych, zabezpieczenie, wycena i rozliczenie, SLA i pomoc</translation>
+        </text>
+        <text id="certificate-pcap">
+            <translation lang='en'>PCAP - Certified Associate in Python Programming</translation>
+            <translation lang='de'>PCAP - Certified Associate in Python Programming</translation>
+            <translation lang='pl'>PCAP - certyfikowany programista Python</translation>
+        </text>
+        <text id="certificate-pcap-description">
+            <translation lang='en'>Operators, Functions, Tuples, Dictionaries, Exceptions, Iterators, IO, Modules, Packages, Object-Oriented Programming</translation>
+            <translation lang='de'>Operatoren, Funktionen, Tupel, Dictionaries, Exceptions, Iteratoren, IO, Module, Packages, objektorientierte Programmierung</translation>
+            <translation lang='pl'>Operatory, funkcje, krotki, słowniki, wyjątki, iteratory, IO, moduły, pakiety, programowanie objektowe</translation>
+        </text>
+        <text id="certificate-ocp-description">
+            <translation lang='en'>Functional Programming, Design Patterns, Generics and Collections, Localization, IO, NIO.2, Concurrency, Fork-Join Framework, JDBC</translation>
+            <translation lang='de'>Funktionale Programmierung, Design Patterns, Generics und Collections, Lokalisierung, IO, NIO.2, Concurrency, Fork-Join-Framework, JDBC</translation>
+            <translation lang='pl'>Programowanie funkcjonalne, wzornictwo, generics i collections, lokalizacja, IO, NIO.2, współbieżność, framework fork-join, JDBC</translation>
+        </text>
+        <text id="certificate-oca-description">
+            <translation lang='en'>Class Design, Methods and Encapsulation, Exceptions, DateTime API, Lambdas</translation>
+            <translation lang='de'>Klassendesign, Methoden und Kapselung, Exceptions, DateTime-API, Lambdas</translation>
+            <translation lang='pl'>Klasy, metody i enkapsulacja, wyjątki, datetime API, lambdy</translation>
+        </text>
+        <text id="certificate-deutschlandstipendium">
+            <translation lang='en'>Deutschlandstipendium scholarship</translation>
+            <translation lang='de'>Deutschlandstipendium</translation>
+            <translation lang='pl'>Stypendium \"Deutschlandstipendium\"</translation>
+        </text>
+        <text id="certificate-efellows">
+            <translation lang='en'>e-fellows.net scholarship</translation>
+            <translation lang='de'>e-fellows.net-Stipendium</translation>
+            <translation lang='pl'>Stypendium e-fellows.net</translation>
+        </text>
+        <text id="certificate-efellows-description">
+            <translation lang='en'>Awarded for outstanding results in the studies and internships as well as extracurricular activities</translation>
+            <translation lang='de'>Verliehen für herausragende Leistungen im Studium sowie in Praktika und außerschulischem Engagement</translation>
+            <translation lang='pl'>Przyznany za wybitne wyniki zarówno w studiach jak i w praktykach i w aktywnościach pozalekcyjnych</translation>
+        </text>
+        <text id="certificate-unicert">
+            <translation lang='en'>UNIcert III English certificate</translation>
+            <translation lang='de'>UNIcert-III Englisch-Zertifikat</translation>
+            <translation lang='pl'>Certyfikat z języka angielskiego UNIcert-III</translation>
+        </text>
+        <text id="certificate-unicert-description">
+            <translation lang='en'>C1 level on the CEFR, grade: 1.3 (DE) / 5.7 (CH)</translation>
+            <translation lang='de'>C1-Level im GER, Note: 1.3 (DE) / 5.7 (CH)</translation>
+            <translation lang='pl'>Poziom C1 w skali CEFR, ocena: 1.3 (DE) / 5.7 (CH)</translation>
+        </text>
+        <text id="certificate-matlab">
+            <translation lang='en'>Matlab Onramp certificate</translation>
+            <translation lang='de'>Matlab Onramp-Zertifikat</translation>
+            <translation lang='pl'>Certyfikat Matlab Onramp</translation>
+        </text>
+        <text id="certificate-matlab-description">
+            <translation lang='en'>Vectors, matrices, array indexing, plotting data</translation>
+            <translation lang='de'>Vektoren, Matrizen, Array-Indizierung, Datendarstellung</translation>
+            <translation lang='pl'>Wektory, matryce, indeksowanie, kreślenie danych</translation>
+        </text>
+        <text id="certificate-network">
+            <translation lang='en'>Network Security participation certificate</translation>
+            <translation lang='de'>Netzwerksicherheit Teilnahmezertifikat</translation>
+            <translation lang='pl'>Bezpieczeństwo sieci - certyfikat uczestnictwa</translation>
+        </text>
+        <text id="certificate-network-description">
+            <translation lang='en'>12-week MOOC about network attacks, security measures, secure communication, IT baseline protection and ISM (ISO/IEC 27001)</translation>
+            <translation lang='de'>Zwölfwöchiger MOOC über Angriffsmöglichkeiten und Schutzmaßnahmen auf Netzwerke, sichere Internetkommunikation, IT-Grundschutz und ISMS (ISO/IEC 27001)</translation>
+            <translation lang='pl'>12-tygodniowy MOOC o atakach sieciowych, środkach bezpieczeństwa, bezpiecznej komunikacji, bezpieczeństwa IT i ISM (ISO/IEC 27001)</translation>
+        </text>
+        <text id="certificate-tennis-2">
+            <translation lang='en'>Tennis tournament winner certificate</translation>
+            <translation lang='de'>Tennis-Turnier 1. Platz</translation>
+            <translation lang='pl'>Pierwsze miejsce w turnieju tenisowym</translation>
+        </text>
+        <text id="certificate-tennis-2-description">
+            <translation lang='en'>1st place in the 11th tennis tournament of Humboldt University of Berlin</translation>
+            <translation lang='de'>1. Platz im elften Tennis-Turnier der Humboldt-Universität zu Berlin</translation>
+            <translation lang='pl'>Pierwsze miejsce w jedenastym turnieju tenisowym Uniwersytetu Humboldta w Berlinie</translation>
+        </text>
+        <text id="certificate-tennis-1">
+            <translation lang='en'>König winner</translation>
+            <translation lang='de'>König-Sieger</translation>
+            <translation lang='pl'>Zwycięzca \"König\"</translation>
+        </text>
+        <text id="certificate-tennis-1-description">
+            <translation lang='en'>Honorary certificate during the tennis crash course</translation>
+            <translation lang='de'>Ehrenurkunde während des Tennis-Intensivkurses</translation>
+            <translation lang='pl'>Certyfikat honorowy w trakcie kursu intensywnego tenisa</translation>
+        </text>
+
+        <text id="github-link">
+            <translation lang='en'>View on GitHub</translation>
+            <translation lang='de'>GitHub</translation>
+            <translation lang='pl'>Zobacz na GitHubie</translation>
+        </text>
+        <text id="doi-link">
+            <translation lang='en'>DOI 10.18452/21355</translation>
+            <translation lang='de'>DOI 10.18452/21355</translation>
+            <translation lang='pl'>DOI 10.18452/21355</translation>
+        </text>
+        <text id="chrome-link">
+            <translation lang='en'>View in Chrome Web Store</translation>
+            <translation lang='de'>Chrome Web Store</translation>
+            <translation lang='pl'>Zobacz w Chrome Web Store</translation>
+        </text>
+
+        <text id="get-in-touch-text">
+            <translation lang='en'>To get in touch with me, please send me a message. I will respond as soon as possible.</translation>
+            <translation lang='de'>Bitte senden Sie mir eine Nachricht, um mit mir in Kontakt zu kommen. Ich werde so bald wie möglich antworten.</translation>
+            <translation lang='pl'>Proszę wysłać wiadomość, aby skontaktować się ze mną. Odpowiem w krótce.</translation>
+        </text>
+        <text id="formal-template">
+            <translation lang='en'>Formal template</translation>
+            <translation lang='de'>Formelle Vorlage</translation>
+            <translation lang='pl'>Szablon formalny</translation>
+        </text>
+        <text id="informal-template">
+            <translation lang='en'>Informal template</translation>
+            <translation lang='de'>Informelle Vorlage</translation>
+            <translation lang='pl'>Szablon nieformalny</translation>
+        </text>
+        <text id="contact-me">
+            <translation lang='en'>Contact me</translation>
+            <translation lang='de'>Jetzt kontaktieren</translation>
+            <translation lang='pl'>Kontakt</translation>
+        </text>
+    </language>
+</stati18n>

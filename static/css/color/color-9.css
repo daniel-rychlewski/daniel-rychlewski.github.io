@@ -1,0 +1,8 @@
+:root {
+    --color-1: #ff7eb3;
+    --color-1-darker-40: #ff7eb3;
+    --color-2: #ff758c;
+    --color-2-darker-40: #df0025;
+    --color-2-darker-50: #ba001f;
+    --mark-color: var(--color-1);
+}

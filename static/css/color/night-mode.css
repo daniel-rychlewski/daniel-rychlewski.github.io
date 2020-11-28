@@ -1,0 +1,167 @@
+:root {
+    --color-1: #333333;
+    --color-2: #444444;
+    --mark-color: #444444;
+}
+
+body, #contact {
+    background: #000000;
+}
+
+#home > div.container > div > div:nth-child(2) > img,
+#about > div > div.row.align-items-center > div.col-lg-5.m-15px-tb > div > img,
+div.modal.fade.show > div > div > div.modal-body > img,
+#oca-logo,
+#ocp-logo,
+div.img > img {
+    filter: brightness(70%);
+}
+
+#color-dropdown, #language-dropdown {
+    background-color: #0b0b0b;
+}
+#language-dropdown > img:hover {
+    background-color: #666666;
+}
+
+#skillSearch,
+#accordion1 > div,
+#accordion2 > div {
+    background: #000000;
+}
+
+#accordion1 > div > div.collapse.show > div > div > div > div,
+#accordion2 > div > div.collapse.show > div > div > div > div {
+    background: #666666;
+}
+
+.btn-link,
+.btn-link:hover {
+    color: #b5b5b5;
+}
+
+.section.gray-bg {
+    background: #0b0b0b;
+}
+
+.about-me-img {
+    border: 14px solid #000000;
+}
+
+.about-me-img .social-icon {
+    background: #000000;
+}
+
+div.col-lg-5.m-15px-tb > div > div > a:hover {
+    background: #4c4c4c;
+}
+
+div:nth-child(1) > div > p,
+div.row.about-list,
+div.row.about-list > div > div > label > div,
+div.col-lg-7.m-15px-tb > div > h4,
+div.col-lg-7.m-15px-tb > div > h6 {
+    color: #b5b5b5;
+}
+
+div:nth-child(1) > div > h6,
+div:nth-child(1) > div > h1,
+h3 > div {
+    color: #b5b5b5;
+}
+
+a, a:hover {
+    color: #f0f0f0;
+}
+
+.feature-box-1 {
+    background: #090a0c;
+}
+
+div.feature-content > h5 > div {
+    color: #f0f0f0;
+}
+.feature-box-1 .icon {
+    border-color: #090a0c;
+    color: #090a0c; }
+
+.portfolio-filter li {
+    background-color: #b5b5b5;
+}
+
+.testimonial-col-01 {
+    background-color: #0b0b0b;
+}
+
+div.media-body.p-25px-l > div,
+div.media-body.p-25px-l > div.tc-info > h6 {
+    color: #b5b5b5;
+}
+
+.portfolio-filter li:hover,
+.portfolio-filter li.active {
+    box-shadow: 0px 1px 27px -3px #FFFFFF;
+}
+
+.portfolio-img {
+    filter: brightness(70%);
+}
+
+.modal-content {
+    background-color: #000000;
+}
+.modal-title {
+    color: #f0f0f0;
+}
+
+@media (max-width: 991px) {
+    .fixed-header .header-dark {
+        background: #0b0b0b;
+    }
+
+    .header-nav .navbar-nav .nav-link.active, .header-nav .navbar-nav .nav-link:hover,
+    .fixed-header .header-white .navbar-nav .nav-link.active, .fixed-header .header-white .navbar-nav .nav-link:hover {
+        color: #000000;
+    }
+
+    .header-nav .navbar-nav {
+        background-color: #000000;
+    }
+}
+@media (min-width: 992px) {
+    .header-dark, .fixed-header .header-dark {
+        background: #0b0b0b;
+    }
+
+    .header-dark .navbar-nav .nav-link.active, .header-dark .navbar-nav .nav-link:hover,
+    .fixed-header .header-white .navbar-nav .nav-link.active, .fixed-header .header-white .navbar-nav .nav-link:hover {
+        color: #000000;
+    }
+}
+#navbar-collapse-toggle > ul > li > a > div,
+#navbar-collapse-toggle > ul > li > div > button > div,
+.modal-footer > button, .modal-footer > button:hover {
+    color: #b5b5b5;
+}
+
+div.modal-body > i, div.modal-body > ul, div.modal-body > ul > li {
+    color: #b5b5b5;
+}
+
+.contact-form.box-shadow {
+    background-color: #666666;
+}
+
+.owl-dots .owl-dot {
+    background: #b5b5b5;
+    border: 1px solid var(--color-1);
+}
+
+.modal.fade .modal-dialog,
+.modal.show .modal-dialog,
+.fade, .show {
+    /* in a transition, pictures would be too bright (filter not applied) */
+    transition: none;
+    transform: none;
+    -webkit-transform: none;
+}

@@ -1,0 +1,26 @@
+:root {
+    --color-1: #43e97b;
+    --color-1-darker-40: #12a142;
+    --color-2: #38f9d7;
+    --color-2-darker-40: #05b193;
+    --color-2-darker-50: #04947a;
+    --mark-color: var(--color-1);
+}
+
+/*Light theme -> black text instead of white text in feature box*/
+
+.feature-box-1:hover {
+    color: #090a0c;
+}
+.feature-box-1:hover .icon {
+    border-color: #090a0c;
+    color: #090a0c; }
+.feature-box-1:hover h5 {
+    color: #090a0c; }
+.feature-box-1:hover p {
+    color: rgba(0, 0, 0, 0.85); }
+
+.portfolio-filter li:hover,
+.portfolio-filter li.active {
+    color: #000000;
+}

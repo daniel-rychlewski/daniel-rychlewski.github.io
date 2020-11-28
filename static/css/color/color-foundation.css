@@ -1,0 +1,171 @@
+::selection, ::-moz-selection {
+    background-color:var(--color-2);
+    color: #fff;
+}
+
+.theme-color {
+    color:var(--color-2-darker-50);
+}
+
+.theme-after-bg:after,
+.btn-theme,
+.theme-bg {
+    background:var(--color-2);
+}
+
+
+.btn-theme {
+    border-color:var(--color-2);
+}
+
+.portfolio-hover-01 .action-btn a:hover,
+.portfolio-filter li:hover,
+.portfolio-filter li.active,
+.owl-dots .owl-dot.active,
+.m-btn-theme,
+.m-btn.m-btn-dark:hover,
+.title-section h2:after,
+.m-btn-white:hover,
+.theme-after:after,
+.theme-g-bg{
+    background: var(--color-2);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--color-1), var(--color-2));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--color-1), var(--color-2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: var(--color-1);
+}
+
+.m-btn.m-btn-theme {
+    background: var(--color-1);
+    border-color: var(--color-1);
+}
+
+/*Reverse*/
+.m-btn.m-btn-theme:hover, .m-btn-theme:hover{
+    background: #0072ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--color-2), var(--color-1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--color-2), var(--color-1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: #090a0c;
+    background: #090a0c;
+}
+
+.m-btn.m-btn-t-theme {
+    border-color: var(--color-1);
+    color: var(--color-1);
+}
+
+.m-btn.m-btn-t-theme:hover {
+    background: var(--color-1);
+    border-color: var(--color-1);
+    color: #ffffff;
+}
+
+.m-btn.m-btn-white {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--color-1);
+}
+
+.video-btn.white span {
+    color: var(--color-1); }
+.video-btn.theme {
+    background: var(--color-1); }
+.video-btn.theme:after {
+    background: var(--color-1); }
+
+a {
+    color: var(--color-1-darker-40);
+}
+a:hover {
+    color: var(--color-2-darker-40);
+    text-decoration: none;
+}
+
+.m-btn-link {
+    color: var(--color-1);
+}
+.m-btn-link:hover {
+    color: #090a0c;
+}
+
+mark {
+    background-image: linear-gradient(var(--color-2), var(--color-1));
+}
+
+.load-circle span:after {
+    border: 5px solid #ffffff;
+    border-color: #ffffff transparent #ffffff transparent;
+}
+
+.owl-dots .owl-dot {
+    background: #ffffff;
+    border: 1px solid var(--color-1);
+}
+
+.owl-carousel-white .owl-dots .owl-dot {
+    border-color: #ffffff;
+    background: none;
+}
+.owl-carousel-white .owl-dots .owl-dot.active {
+    background: #ffffff;
+}
+
+.owl-dots .owl-dot.active,
+.navbar-toggler,
+.toggler-menu {
+    background: linear-gradient(var(--color-2), var(--color-1));
+}
+
+.toggler-menu span {
+    background: #ffffff;
+    color: #ffffff;
+}
+
+.mob-header .navbar-brand a,
+.header-left .nav li a.active, .header-left .nav li a:hover,
+.feature-box-2 .icon,
+.feature-box-2:hover .icon {
+    color: var(--color-1);
+}
+
+.header-left .navbar-brand a,
+.header-left .nav li a:after,
+.section-title h3:after,
+.home-banner-01 .go-to-next a,
+.about-me-img .social-icon a,
+.about-me-img .btns a,
+.blog-grid .blog-grid-info .date,
+.contact-info .icon {
+    background: linear-gradient(var(--color-2), var(--color-1));
+}
+
+.about-me-img .social-icon a:hover,
+.about-me-img .btns a:hover{
+    background: #090a0c;
+}
+
+@media (max-width: 991px) {
+    .header {
+        background: var(--color-2);
+    }
+    .header-nav .navbar-nav .nav-link.active, .header-nav .navbar-nav .nav-link:hover {
+        color: var(--color-2-darker-40);
+    }
+}
+@media (min-width: 992px) {
+    .header-dark .navbar-nav .nav-link.active, .header-dark .navbar-nav .nav-link:hover,
+    .fixed-header .header-white .navbar-nav .nav-link.active, .fixed-header .header-white .navbar-nav .nav-link:hover {
+        color: var(--color-2-darker-40);
+    }
+}
+
+.feature-box-2 {
+    border: 2px solid var(--color-2);
+}
+.feature-box-1 .icon {
+    border: 2px solid var(--color-2);
+    color: var(--color-1);
+}
+.feature-box-1:hover {
+    background: var(--color-1);
+    border-color: var(--color-1);
+}
