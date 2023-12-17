@@ -27,15 +27,15 @@
             <translation lang='de'>Kenntnisse</translation>
             <translation lang='pl'>Umiejętności</translation>
         </text>
-        <text id="chapter-link-services">
-            <translation lang='en'>Services</translation>
-            <translation lang='de'>Angebot</translation>
-            <translation lang='pl'>Serwisy</translation>
+        <text id="chapter-link-added-value">
+            <translation lang='en'>Added value</translation>
+            <translation lang='de'>Mehrwert</translation>
+            <translation lang='pl'>Wartość dodana</translation>
         </text>
         <text id="chapter-link-portfolio">
-            <translation lang='en'>Portfolio</translation>
-            <translation lang='de'>Projekte</translation>
-            <translation lang='pl'>Portfolio</translation>
+            <translation lang='en'>Hobby projects</translation>
+            <translation lang='de'>Hobbyprojekte</translation>
+            <translation lang='pl'>Projekty hobbystyczne</translation>
         </text>
         <text id="chapter-link-certificates">
             <translation lang='en'>Certificates</translation>
@@ -74,20 +74,15 @@
             <translation lang='de'>Über mich</translation>
             <translation lang='pl'>O mnie</translation>
         </text>
-        <text id="chapter-name-my-skills">
-            <translation lang='en'>My skills</translation>
-            <translation lang='de'>Meine Kenntnisse</translation>
-            <translation lang='pl'>Moje umiejętności</translation>
-        </text>
-        <text id="chapter-name-my-services">
-            <translation lang='en'>My services</translation>
-            <translation lang='de'>Mein Angebot</translation>
-            <translation lang='pl'>Moje serwisy</translation>
+        <text id="chapter-name-my-added-value">
+            <translation lang='en'>My added value</translation>
+            <translation lang='de'>Mein Mehrwert</translation>
+            <translation lang='pl'>Moja wartość dodana</translation>
         </text>
         <text id="chapter-name-portfolio">
-            <translation lang='en'>Portfolio</translation>
-            <translation lang='de'>Projekte</translation>
-            <translation lang='pl'>Portfolio</translation>
+            <translation lang='en'>Hobby projects</translation>
+            <translation lang='de'>Hobbyprojekte</translation>
+            <translation lang='pl'>Projekty hobbystyczne</translation>
         </text>
         <text id="chapter-name-certificates">
             <translation lang='en'>Certificates</translation>
@@ -111,9 +106,9 @@
             <translation lang='pl'>Moje projekty</translation>
         </text>
         <text id="start-hire-me">
-            <translation lang='en'>Hire me</translation>
+            <translation lang='en'>Get in touch</translation>
             <translation lang='de'>Kontakt</translation>
-            <translation lang='pl'>Zatrudnij mnie</translation>
+            <translation lang='pl'>Kontakt</translation>
         </text>
 
         <text id="about-me-birthday-key">
@@ -137,19 +132,9 @@
             <translation lang='pl'>Miejsce zamieszkania</translation>
         </text>
         <text id="about-me-residence-value">
-            <translation lang='en'>Switzerland</translation>
-            <translation lang='de'>Schweiz</translation>
-            <translation lang='pl'>Szwajcaria</translation>
-        </text>
-        <text id="about-me-permit-key">
-            <translation lang='en'>Work permit</translation>
-            <translation lang='de'>Bewilligung</translation>
-            <translation lang='pl'>Zezwolenie na pracę</translation>
-        </text>
-        <text id="about-me-permit-value">
-            <translation lang='en'>B</translation>
-            <translation lang='de'>B</translation>
-            <translation lang='pl'>B</translation>
+            <translation lang='en'>Poland</translation>
+            <translation lang='de'>Polen</translation>
+            <translation lang='pl'>Polska</translation>
         </text>
         <text id="about-me-citizenships-key">
             <translation lang='en'>Citizenships</translation>
@@ -203,11 +188,6 @@
             <translation lang='pl'>Dyplomy</translation>
         </text>
 
-        <text id="skills-expand-info">
-            <translation lang='en'>Please expand a skill category to see the skills and hover over a skill name for occasionally displayed additional information. For mobile platforms, you can press and hold a skill.</translation>
-            <translation lang='de'>Bitte öffnen Sie die passende Kategorie und bewegen die Maus über die Kenntnis für womöglich hinterlegte Zusatzinformationen. Auf mobilen Plattformen können Sie zu diesem Zweck die Kenntnis gedrückt halten.</translation>
-            <translation lang='pl'>Proszę otworzyć odpowiednią kategorie i zatrymać się myszką nad umiejętnością, aby mogły się pojawić dodatkowe informacje. Na platformach mobilnych można do tego nacisnąć i przytrzymać umiejętność.</translation>
-        </text>
         <text id="skills-expand">
             <translation lang='en'>Expand all</translation>
             <translation lang='de'>Alle öffnen</translation>
@@ -357,30 +337,43 @@
             <translation lang='de'>Technisches Know-how</translation>
             <translation lang='pl'>Wiedza techniczna</translation>
         </text>
-        <text id="service-2-head">
-            <translation lang='en'>Comprehensive Testing</translation>
-            <translation lang='de'>Umfassendes Testen</translation>
-            <translation lang='pl'>Kompleksowe testowanie</translation>
+        <text id="service-1-description">
+            <translation lang='en'>Tech stack: Java/Spring Boot, Angular/TypeScript/Bootstrap</translation>
+            <translation lang='de'>Tech Stack: Java/Spring Boot, Angular/TypeScript/Bootstrap</translation>
+            <translation lang='pl'>Stack technologiczny: Java/Spring Boot, Angular/TypeScript/Bootstrap</translation>
         </text>
+
         <text id="service-3-head">
             <translation lang='en'>Fast Pace</translation>
             <translation lang='de'>Schneller Fortschritt</translation>
             <translation lang='pl'>Szybkie tempo</translation>
         </text>
+        <text id="service-3-description">
+            <translation lang='en'>Multiple years of experience in international consultancies</translation>
+            <translation lang='de'>Mehrjährige Erfahrung in internationalen Beratungsunternehmen</translation>
+            <translation lang='pl'>Wieloletnie doświadczenie w międzynarodowych firmach konsultingowych</translation>
+        </text>
+
         <text id="service-4-head">
-            <translation lang='en'>Continuous Feedback</translation>
-            <translation lang='de'>Kontinuierliches Feedback</translation>
-            <translation lang='pl'>Ciągłe uzyskiwanie opinii</translation>
+            <translation lang='en'>Continuous Learning</translation>
+            <translation lang='de'>Kontinuierliches Lernen</translation>
+            <translation lang='pl'>Ciągłe uczenie się</translation>
         </text>
-        <text id="service-5-head">
-            <translation lang='en'>Life-Long Learning</translation>
-            <translation lang='de'>Lebenslanges Lernen</translation>
-            <translation lang='pl'>Uczenie się przez całe życie</translation>
+        <text id="service-4-description">
+            <translation lang='en'>As visible in my certificates and side projects</translation>
+            <translation lang='de'>Wie in meinen Zertifikaten und Nebenprojekten zu sehen ist</translation>
+            <translation lang='pl'>Jak widać w moich certyfikatach i projektach pobocznych</translation>
         </text>
+
         <text id="service-6-head">
             <translation lang='en'>Easy to Understand</translation>
             <translation lang='de'>Leicht verständlich</translation>
             <translation lang='pl'>Łatwo do zrozumienia</translation>
+        </text>
+        <text id="service-6-description">
+            <translation lang='en'>Targeted communication on a professional level</translation>
+            <translation lang='de'>Gezielte Kommunikation auf professioneller Ebene</translation>
+            <translation lang='pl'>Skierowana komunikacja na poziomie profesjonalnym</translation>
         </text>
 
         <text id="projects-filter-all">
@@ -410,19 +403,19 @@
         </text>
 
         <text id="skill-java">
-            <translation lang='en'>OCP- and OCA-certified Java 8 programmer</translation>
-            <translation lang='de'>OCP- und OCA-zertifizierter Java-8-Programmierer</translation>
-            <translation lang='pl'>Certyfikowany programista Java 8 (OCP, OCA)</translation>
+            <translation lang='en'>OCP- and OCA-certified Java 8 and 11 programmer</translation>
+            <translation lang='de'>OCP- und OCA-zertifizierter Java-8- und Java-11-Programmierer</translation>
+            <translation lang='pl'>Certyfikowany programista Java 8 i 11(OCP, OCA)</translation>
         </text>
         <text id="skill-python">
             <translation lang='en'>PCAP-certified</translation>
             <translation lang='de'>PCAP-zertifiziert</translation>
             <translation lang='pl'>Certyfikat PCAP</translation>
         </text>
-        <text id="git-certificate">
-            <translation lang='en'>bbv Academy certificate "Distributed Version Control with Git"</translation>
-            <translation lang='de'>bbv Academy-Zertifikat "Distributed Version Control mit Git"</translation>
-            <translation lang='pl'>Certyfikat bbv Academy "Rozproszone systemy kontroli wersji z Gitem"</translation>
+        <text id="skill-cplusplus">
+            <translation lang='en'>CPA-21-02-certified</translation>
+            <translation lang='de'>CPA-21-02-zertifiziert</translation>
+            <translation lang='pl'>Certyfikat CPA-21-02</translation>
         </text>
         <text id="skill-csm">
             <translation lang='en'>Certified ScrumMaster</translation>
@@ -430,25 +423,15 @@
             <translation lang='pl'>Certyfikowany ScrumMaster</translation>
         </text>
 
-        <text id="certificate-aws-2020">
-            <translation lang='en'>AWS Summit 2020 Certificate of Attendance</translation>
-            <translation lang='de'>AWS Summit 2020 Teilnahmezertifikat</translation>
-            <translation lang='pl'>AWS Summit 2020 certyfikat uczestnictwa</translation>
+        <text id="certificate-azure-expert">
+            <translation lang='en'>Azure Expert Certificates</translation>
+            <translation lang='de'>Azure Expert-Zertifikate</translation>
+            <translation lang='pl'>Certyfikaty Azure Expert</translation>
         </text>
-        <text id="certificate-aws-2020-description">
-            <translation lang='en'>Includes full-stack mobile and web development with AWS Amplify, application integration patterns for microservices and event-driven architecture</translation>
-            <translation lang='de'>u.a. Full-Stack Mobile- und Web-Development mit AWS und Amplify, Integrationsmuster zur Anwendungsintegration für Microservices und ereignisgesteuerte Architektur</translation>
-            <translation lang='pl'>Między innymi: programowanie full-stack z AWS i Amplify, struktury integracji aplikacji dla mikroserwisów i architektura zdarzeniowa</translation>
-        </text>
-        <text id="certificate-git">
-            <translation lang='en'>Distributed Version Control with Git</translation>
-            <translation lang='de'>Distributed Version Control mit Git</translation>
-            <translation lang='pl'>Rozproszone systemy kontroli wersji z Gitem</translation>
-        </text>
-        <text id="certificate-git-description">
-            <translation lang='en'>Theory of Distributed Version Control, Local Versioning, Working with Branches, Distributed Working with a Remote Repository</translation>
-            <translation lang='de'>Theorie Distributed Version Control, Lokale Versionierung, Arbeiten mit Branches, verteilt arbeiten mit entferntem Repository</translation>
-            <translation lang='pl'>Teoria rozproszonych i lokalnych systemów kontroli wersji, pracowanie z gałęziami, rozproszona praca ze zdalnym repozytorium</translation>
+        <text id="certificate-azure-associate">
+            <translation lang='en'>Azure Associate Certificates</translation>
+            <translation lang='de'>Azure Associate-Zertifikate</translation>
+            <translation lang='pl'>Certyfikaty Azure Associate</translation>
         </text>
         <text id="certificate-csm">
             <translation lang='en'>Certified ScrumMaster</translation>
@@ -461,14 +444,9 @@
             <translation lang='pl'>Przestrzeganie Scrum tak jak określony w Scrum Guide, ułatwienie i utrzymanie zdarzeń Scrum, usunięcie przeszkód organizacyjnych i dla zespołu</translation>
         </text>
         <text id="certificate-oci">
-            <translation lang='en'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
-            <translation lang='de'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
-            <translation lang='pl'>Oracle Cloud Infrastructure Foundations 2020 Certified Associate</translation>
-        </text>
-        <text id="certificate-oci-description">
-            <translation lang='en'>Cloud Concepts, OCI Architecture, Compute Services, Storage Services, Networking Services, IAM, Database Services, Security, Pricing and Billing, SLA and Support</translation>
-            <translation lang='de'>Cloud-Konzepte, OCI-Architektur, Compute-Services, Storage-Services, Netzwerk-Services, IAM, Datenbank-Services, Security, Preisgestaltung und Abrechnung, SLA und Support</translation>
-            <translation lang='pl'>Koncepcje chmury, architektura OCI, serwisy Compute, Storage, Networking, IAM, serwisy baz danych, zabezpieczenie, wycena i rozliczenie, SLA i pomoc</translation>
+            <translation lang='en'>Oracle Cloud Infrastructure</translation>
+            <translation lang='de'>Oracle Cloud Infrastructure</translation>
+            <translation lang='pl'>Oracle Cloud Infrastructure</translation>
         </text>
         <text id="certificate-pcap">
             <translation lang='en'>PCAP - Certified Associate in Python Programming</translation>
@@ -480,15 +458,25 @@
             <translation lang='de'>Operatoren, Funktionen, Tupel, Dictionaries, Exceptions, Iteratoren, IO, Module, Packages, objektorientierte Programmierung</translation>
             <translation lang='pl'>Operatory, funkcje, krotki, słowniki, wyjątki, iteratory, IO, moduły, pakiety, programowanie objektowe</translation>
         </text>
-        <text id="certificate-ocp-description">
-            <translation lang='en'>Functional Programming, Design Patterns, Generics and Collections, Localization, IO, NIO.2, Concurrency, Fork-Join Framework, JDBC</translation>
-            <translation lang='de'>Funktionale Programmierung, Design Patterns, Generics und Collections, Lokalisierung, IO, NIO.2, Concurrency, Fork-Join-Framework, JDBC</translation>
-            <translation lang='pl'>Programowanie funkcjonalne, wzornictwo, generics i collections, lokalizacja, IO, NIO.2, współbieżność, framework fork-join, JDBC</translation>
+        <text id="certificate-ocp11">
+            <translation lang='en'>Java: Oracle Certified Professional</translation>
+            <translation lang='de'>Java: Oracle Certified Professional</translation>
+            <translation lang='pl'>Java: Oracle Certified Professional</translation>
         </text>
-        <text id="certificate-oca-description">
-            <translation lang='en'>Class Design, Methods and Encapsulation, Exceptions, DateTime API, Lambdas</translation>
-            <translation lang='de'>Klassendesign, Methoden und Kapselung, Exceptions, DateTime-API, Lambdas</translation>
-            <translation lang='pl'>Klasy, metody i enkapsulacja, wyjątki, datetime API, lambdy</translation>
+        <text id="certificate-scrum">
+            <translation lang='en'>Scrum Master, Product Owner, ITIL, PRINCE2 Agile</translation>
+            <translation lang='de'>Scrum Master, Product Owner, ITIL, PRINCE2 Agile</translation>
+            <translation lang='pl'>Scrum Master, Product Owner, ITIL, PRINCE2 Agile</translation>
+        </text>
+        <text id="certificate-isqb">
+            <translation lang='en'>iSQI: Software architecture and testing</translation>
+            <translation lang='de'>iSQI: Software-Architektur and Testing</translation>
+            <translation lang='pl'>iSQI: architektura oprogramowania i testowanie</translation>
+        </text>
+        <text id="certificate-cep">
+            <translation lang='en'>Certified Ethereum Professional</translation>
+            <translation lang='de'>Certified Ethereum Professional</translation>
+            <translation lang='pl'>Certified Ethereum Professional</translation>
         </text>
         <text id="certificate-deutschlandstipendium">
             <translation lang='en'>Deutschlandstipendium scholarship</translation>
@@ -500,62 +488,16 @@
             <translation lang='de'>e-fellows.net-Stipendium</translation>
             <translation lang='pl'>Stypendium e-fellows.net</translation>
         </text>
-        <text id="certificate-efellows-description">
-            <translation lang='en'>Awarded for outstanding results in the studies and internships as well as extracurricular activities</translation>
-            <translation lang='de'>Verliehen für herausragende Leistungen im Studium sowie in Praktika und außerschulischem Engagement</translation>
-            <translation lang='pl'>Przyznany za wybitne wyniki zarówno w studiach jak i w praktykach i w aktywnościach pozalekcyjnych</translation>
-        </text>
         <text id="certificate-unicert">
             <translation lang='en'>UNIcert III English certificate</translation>
             <translation lang='de'>UNIcert-III Englisch-Zertifikat</translation>
             <translation lang='pl'>Certyfikat z języka angielskiego UNIcert-III</translation>
-        </text>
-        <text id="certificate-unicert-description">
-            <translation lang='en'>C1 level on the CEFR, grade: 1.3 (DE) / 5.7 (CH)</translation>
-            <translation lang='de'>C1-Level im GER, Note: 1.3 (DE) / 5.7 (CH)</translation>
-            <translation lang='pl'>Poziom C1 w skali CEFR, ocena: 1.3 (DE) / 5.7 (CH)</translation>
         </text>
         <text id="certificate-matlab">
             <translation lang='en'>Matlab Onramp certificate</translation>
             <translation lang='de'>Matlab Onramp-Zertifikat</translation>
             <translation lang='pl'>Certyfikat Matlab Onramp</translation>
         </text>
-        <text id="certificate-matlab-description">
-            <translation lang='en'>Vectors, matrices, array indexing, plotting data</translation>
-            <translation lang='de'>Vektoren, Matrizen, Array-Indizierung, Datendarstellung</translation>
-            <translation lang='pl'>Wektory, matryce, indeksowanie, kreślenie danych</translation>
-        </text>
-        <text id="certificate-network">
-            <translation lang='en'>Network Security participation certificate</translation>
-            <translation lang='de'>Netzwerksicherheit Teilnahmezertifikat</translation>
-            <translation lang='pl'>Bezpieczeństwo sieci - certyfikat uczestnictwa</translation>
-        </text>
-        <text id="certificate-network-description">
-            <translation lang='en'>12-week MOOC about network attacks, security measures, secure communication, IT baseline protection and ISM (ISO/IEC 27001)</translation>
-            <translation lang='de'>Zwölfwöchiger MOOC über Angriffsmöglichkeiten und Schutzmaßnahmen auf Netzwerke, sichere Internetkommunikation, IT-Grundschutz und ISMS (ISO/IEC 27001)</translation>
-            <translation lang='pl'>12-tygodniowy MOOC o atakach sieciowych, środkach bezpieczeństwa, bezpiecznej komunikacji, bezpieczeństwa IT i ISM (ISO/IEC 27001)</translation>
-        </text>
-        <text id="certificate-tennis-2">
-            <translation lang='en'>Tennis tournament winner certificate</translation>
-            <translation lang='de'>Tennis-Turnier 1. Platz</translation>
-            <translation lang='pl'>Pierwsze miejsce w turnieju tenisowym</translation>
-        </text>
-        <text id="certificate-tennis-2-description">
-            <translation lang='en'>1st place in the 11th tennis tournament of Humboldt University of Berlin</translation>
-            <translation lang='de'>1. Platz im elften Tennis-Turnier der Humboldt-Universität zu Berlin</translation>
-            <translation lang='pl'>Pierwsze miejsce w jedenastym turnieju tenisowym Uniwersytetu Humboldta w Berlinie</translation>
-        </text>
-        <text id="certificate-tennis-1">
-            <translation lang='en'>König winner</translation>
-            <translation lang='de'>König-Sieger</translation>
-            <translation lang='pl'>Zwycięzca \"König\"</translation>
-        </text>
-        <text id="certificate-tennis-1-description">
-            <translation lang='en'>Honorary certificate during the tennis crash course</translation>
-            <translation lang='de'>Ehrenurkunde während des Tennis-Intensivkurses</translation>
-            <translation lang='pl'>Certyfikat honorowy w trakcie kursu intensywnego tenisa</translation>
-        </text>
-
         <text id="github-link">
             <translation lang='en'>View on GitHub</translation>
             <translation lang='de'>GitHub</translation>
@@ -572,11 +514,6 @@
             <translation lang='pl'>Zobacz w Chrome Web Store</translation>
         </text>
 
-        <text id="get-in-touch-text">
-            <translation lang='en'>To get in touch with me, please send me a message. I will respond as soon as possible.</translation>
-            <translation lang='de'>Bitte senden Sie mir eine Nachricht, um mit mir in Kontakt zu kommen. Ich werde so bald wie möglich antworten.</translation>
-            <translation lang='pl'>Proszę wysłać wiadomość, aby skontaktować się ze mną. Odpowiem w krótce.</translation>
-        </text>
         <text id="formal-template">
             <translation lang='en'>Formal template</translation>
             <translation lang='de'>Formelle Vorlage</translation>

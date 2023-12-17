@@ -2,135 +2,6 @@ function getBirthday() {
     return new Date(1997, 2, 27, 0, 0, 0);
 }
 
-function getAge() {
-    var date = new Date();
-    var birthday = getBirthday();
-    if (date.getTime() - birthday.getTime() > 1000 * 60 * 60 * 24 * 365.25) {
-        return date.getFullYear() - birthday.getFullYear();
-    } else {
-        return date.getFullYear() - birthday.getFullYear() - 1;
-    }
-}
-
-function getAccordionElements() {
-    return [
-        $("#programmingLanguages"),
-        $("#databases"),
-        $("#frameworks"),
-        $("#ides"),
-        $("#collapseProjectManagement"),
-        $("#collapseSoftwareDevelopment"),
-        $("#collapseTesting"),
-        $("#collapseVersionControl"),
-        $("#collapseDeepLearning"),
-        $("#collapseCloud"),
-        $("#collapseVisualization"),
-        $("#collapseImageProcessing"),
-        $("#collapseCICD"),
-        $("#collapsePerformance"),
-        $("#collapseArchitecture"),
-        $("#collapseVirtualization"),
-        $("#collapseModeling"),
-        $("#collapseNetwork"),
-        $("#collapseDataTransfer"),
-        $("#collapseFileHosting"),
-        $("#collapseCommunication"),
-        $("#collapseRemoteMaintenance"),
-        $("#collapseSpecification"),
-        $("#collapseOfficeSolutions")
-    ];
-}
-
-function accordionTextClasses() {
-    return [
-        ".card-body > div > h6",
-        ".card-body > p",
-        ".card-body"
-    ]
-}
-
-function initSkillSearch() {
-    var search = document.getElementById('skillSearch');
-
-    // Apply search
-    search.addEventListener('input', function () {
-        var searchText = search.value.toLowerCase();
-        Array.prototype.forEach.call(getAccordionElements(), function (accordion) {
-            if (accordion[0].innerText.toLowerCase().indexOf(searchText) >= 0) {
-                accordion.addClass("show");
-                Array.prototype.forEach.call(accordionTextClasses(), function (classes) {
-                    accordion.find(classes).removeHighlight().highlight(searchText);
-                });
-            } else {
-                accordion.removeClass("show");
-            }
-        });
-    });
-}
-
-function generateCSVSkills() {
-    let skills = "";
-    let delimiter = ", ";
-    Array.prototype.forEach.call(getAccordionElements(), function (accordion) {
-        Array.prototype.forEach.call([".card-body"], function (selector) {
-            Array.prototype.forEach.call(accordion.find(selector), function (text) {
-                let filteredText = text.innerText;
-                filteredText = filteredText.replace(/\s+/g, " "); // trim whitespaces in between text
-                filteredText = filteredText.replace(/\d+% ?/g, "\,"); // remove percentages from sliders like 90%
-                // ignore / filter out explanatory texts, because they are not actual skills
-                let imageProcessing = tryImageProcessing();
-                for (language in imageProcessing) {
-                    filteredText = filteredText.replace(imageProcessing[language].replace(/<[^>]*>?/gm, ''), "") // leave out html tags
-                }
-                let visualization = tryVisualization();
-                for (language in visualization) {
-                    filteredText = filteredText.replace(visualization[language].replace(/<[^>]*>?/gm, ''), "") // leave out html tags
-                }
-                let furtherSkills = getFurtherSkills();
-                for (language in furtherSkills) {
-                    filteredText = filteredText.replace(furtherSkills[language], "")
-                }
-                let relationalDatabases = getRelationalDatabases();
-                for (language in relationalDatabases) {
-                    filteredText = filteredText.replace(relationalDatabases[language], "");
-                }
-                let noSQLDatabases = getNoSQLDatabases();
-                for (language in noSQLDatabases) {
-                    filteredText = filteredText.replace(noSQLDatabases[language], ",")
-                }
-                let ormodm = getORMODM();
-                for (language in ormodm) {
-                    filteredText = filteredText.replace(ormodm[language], ",")
-                }
-                let administration = getAdministration();
-                for (language in administration) {
-                    filteredText = filteredText.replace(administration[language], ",")
-                }
-
-                skills += filteredText;
-            });
-        });
-        skills += delimiter;
-    });
-    skills = skills.replace(/[\s]*[,]+[\s]*/gm, ", "); // use ", " as the sequence between skills
-    skills = skills.trimStart();
-    skills = skills.substring(0, skills.length - delimiter.length);
-
-    return skills;
-}
-
-function showAccordion() {
-    $.each(getAccordionElements(), function (index, element) {
-        element.addClass("show");
-    });
-}
-
-function hideAccordion() {
-    $.each(getAccordionElements(), function (index, element) {
-        element.removeClass("show");
-    });
-}
-
 function openEmail(language) {
     let email = "ZGFuaWVsLnJ5Y2hsZXdza2kuMTk5N0BnbWFpbC5jb20=";
 
@@ -155,140 +26,12 @@ function openEmail(language) {
     }
 }
 
-function copySkillsToClipboard() {
-    var range = document.createRange();
-    range.selectNode(document.getElementById("skills-text"));
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-}
-
-function tryVisualization() {
-    return {
-        'en': "Take a look at my <a target='_blank' href='static/pdf/DataVis1.pdf'>information visualizations</a> and my <a target='_blank' href='https://youtu.be/zQaey32rWC8'>volume visualizations</a> featuring the <a target='_blank' href='https://www.nlm.nih.gov/research/visible/visible_human.html'>Visible Human Project</a>!",
-        'de': "Schauen Sie sich meine <a target='_blank' href='static/pdf/DataVis1.pdf'>Informationsvisualisierungen</a> und <a target='_blank' href='https://youtu.be/zQaey32rWC8'>Volumenvisualisierungen</a> inkl. des <a target='_blank' href='https://www.nlm.nih.gov/research/visible/visible_human.html'>Visible Human Project</a> an!",
-        'pl': "Zobacz moje <a target='_blank' href='static/pdf/DataVis1.pdf'>wizualizacje informacji</a> i <a target='_blank' href='https://youtu.be/zQaey32rWC8'>woluminów</a> na przykladzie projektu <a target='_blank' href='https://www.nlm.nih.gov/research/visible/visible_human.html'>Visible Human Project</a>!"
-    };
-}
-
-function tryImageProcessing() {
-    return {
-        'en': "Take a look at my <a target='_blank' href='static/img/Skills/Kinect.zip'>measurements</a> of objects with the Kinect 360 using plane fitting with Skanect, comparing different presets!",
-        'de': "Schauen Sie sich meine <a target='_blank' href='static/img/Skills/Kinect.zip'>Messungen</a> von Objekten mit der Kinect 360 mittels Plane-Fitting mit Skanect an, in denen ich verschiedene Einstellungen vergleiche!",
-        'pl': "Zobacz moje <a target='_blank' href='static/img/Skills/Kinect.zip'>pomiary</a> objektów z Kinect 360 używając plane fitting z Skanect, porównywując rózne położenia!"
-    };
-}
-
-function getFurtherSkills() {
-    return {
-        'en': "Further skills:",
-        'de': "Weitere Kenntnisse:",
-        'pl': "Dalsze umiejętności:"
-    };
-}
-
-function getRelationalDatabases() {
-    return {
-        'en': "Relational databases:",
-        'de': "Relationale Datenbanken:",
-        'pl': "Relacyjne bazy danych:"
-    }
-}
-
-function getNoSQLDatabases() {
-    return {
-        'en': "NoSQL databases:",
-        'de': "NoSQL-Datenbanken:",
-        'pl': "NoSQLowe bazy danych:"
-    }
-}
-
-function getORMODM() {
-    return {
-        'en': "ORM / ODM:",
-        'de': "ORM / ODM:",
-        'pl': "ORM / ODM:"
-    }
-}
-
-function getAdministration() {
-    return {
-        'en': "Administration:",
-        'de': "Administration:",
-        'pl': "Administracja:"
-    }
-}
-
 function switchLanguage(language) {
-    let furtherSkills = getFurtherSkills()[language];
-    let relationalDatabases = getRelationalDatabases()[language];
-    let noSQLDatabases = getNoSQLDatabases()[language];
-    let ormOdm = getORMODM()[language];
-    let administration = getAdministration()[language];
-
     if (language === 'en') {
-        document.getElementById("on-request-description").innerHTML = "Resume, employers' references, diplomas: available on request";
-        document.getElementById("certificates-description").innerHTML = "Some of my certificates are also listed on my <a target='_blank' href='https://www.youracclaim.com/users/daniel-rychlewski/'>Acclaim</a> profile.";
-        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Software Engineer</span> in <span class='theme-color'>Zurich</span>";
-        document.getElementById("service-1-description").innerHTML = "I have worked with <b>numerous tools and frameworks</b> during my career. Choosing the right ones for each requirement for the best <b>maintainability</b> of the software is a service you can take for granted.";
-        document.getElementById("service-2-description").innerHTML = "<b>Quality assurance</b> has always been an integral part of my work. You can count on me implementing the right tests as part of my service to enhance the <b>comprehensibility</b> of your software.";
-        document.getElementById("service-3-description").innerHTML = "Implementing MVPs and real products under <b>time pressure</b> and a fixed budget has been my bread and butter for years. Even for tight deadlines, you can expect me to always <b>deliver on time</b>.";
-        document.getElementById("service-4-description").innerHTML = "I regularly integrate your <b>feedback</b> into my workflow to ensure I am well on track to tackling your requirements. That way, any room for misunderstandings quickly disappears, guaranteeing you to <b>get your money's worth</b>.";
-        document.getElementById("service-5-description").innerHTML = "Keeping up with the <b>latest tech trends</b> through self-study and hands-on projects allows me to implement your vision with the highest level of quality and <b>cutting-edge design</b>, both on the surface and under the hood.";
-        document.getElementById("service-6-description").innerHTML = "Being aware of the tech bubble I am operating in, I am able to <b>translate business requirements</b> into plain English and the other way around. After all, my service is supposed to <b>serve the customer</b>.";
-        document.getElementById("further-programming-skills").innerHTML = "<b>"+furtherSkills+"</b> PHP, Matlab, Groovy, Shell Scripting, Chrome extension development, C, Haskell, Visual Basic, Prolog, C#, JSON/BSON, HTML, CSS";
-        document.getElementById("databases-relational").innerHTML = "<b>"+relationalDatabases+"</b> MySQL, MSSQL, H2, DB2 (db2top, db2expln), MariaDB";
-        document.getElementById("databases-nosql").innerHTML = "<b>"+noSQLDatabases+"</b> MongoDB";
-        document.getElementById("databases-orm").innerHTML = "<b>"+ormOdm+"</b> Mongoose, Hibernate, JPA";
-        document.getElementById("databases-administration").innerHTML = "<b>"+administration+"</b> NoSQLBooster, Compass, phpMyAdmin, IBM Data Studio";
-        document.getElementById("skills-swe").innerHTML = "<b>"+furtherSkills+"</b> XP, waterfall model, V-Model, spiral model";
-        document.getElementById("ide-skills").innerHTML = "<b>"+furtherSkills+"</b> Netbeans, <a title='C++ discrete event simulator, mainly for network simulation'>OMNeT++</a>, Matlab, BlueJ, SAP BusinessObjects";
-        document.getElementById("skills-testing").innerHTML = "<b>"+furtherSkills+"</b> <a title='structure-oriented test and analysis of programs'>SOTA</a>, <a title='classification tree editor'>TESTONA</a>, <a title='automated regression testing of Java programs'>ATOSj</a>";
-        document.getElementById("skills-version-control").innerHTML = "<b>"+furtherSkills+"</b> Bitbucket, TortoiseGit, RapidSVN";
-        document.getElementById("skills-architecture").innerHTML = "REST APIs, microservices, client-server architecture, monolith, long polling, WebSocket";
+        document.getElementById("on-request-description").innerHTML = "Resume, references, diplomas: available on request";
+        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Software Engineer</span>";
 
-        document.getElementById("angular-title").title = "Website development, both from the scratch and maintenance / bug fixes. For example, used for the MVP for the database replication system for hospital reconstruction, but also for a project management system.";
-        document.getElementById("javascript-title").title = "My Chrome add-on 'Stop AutoLoop', which prevents YouTube video loops, is written entirely in JavaScript";
-        document.getElementById("cpp-title").title = "Both at Humboldt University and during my exchange semester at Swansea University, I have learned about polymorphism, smart pointers, (variadic) templates, RAII, vTable and vPtr, move semantics, casting types, operator overloading, lambdas, threads, STL data structures and much more.";
-        document.getElementById("pytorch-title").title = "This deep learning framework formed the basis of my master thesis because authors of complicated models (e.g., involving tensor splitting operations) chose PyTorch to implement their ideas with. When put together, this resulted in a variety of deep learning models to choose from in the DeepHyperX suite. My experience was that PyTorch was not well-suited for compression-related tasks such as parameter pruning since it requires tensor input and output size to be contained in the code / model, making dynamic adjustments of sizes during, e.g., channel pruning difficult (Keras would be a better choice in my opinion). Most importantly, compressed PyTorch models are not smaller than their original counterparts, counteracting one of the main motivations of model compression.";
-        document.getElementById("keras-title").title = "The high-level deep learning framework built on top of TensorFlow helped me to easily set up layers and parameters of deep learning models for the classification of satellite images in my study project.";
-        document.getElementById("keras-surgeon-title").title = "For my study project about the classification of satellite images with compressed convolutional neural networks, keras-surgeon offered parameter pruning based on the average percentage of zeros. That is how I could check whether or not a smaller model achieves the same classification accuracy, varying parameters like epochs, batch size, the pruning percentage and adding quantization on top. In contrast to PyTorch, the model size physically shrinks after applying pruning.";
-        document.getElementById("tfjs-title").title = "My Hate Block Chrome plugin uses TensorFlow.js for client-side inference to find out whether or not a text is hateful.";
-        document.getElementById("tflite-title").title = "For the mobile deployment of deep learning models into tflite files, this is the framework I have used for my master thesis.";
-        document.getElementById("scikit-title").title = "SVM, SVD, k-NN and other classifiers for my master thesis about compression of neural networks for hyperspectral image classification.";
-        document.getElementById("pandas-title").title = "Calculation of means, standard deviations, Excel logging for my master thesis about compression of neural networks for hyperspectral image classification.";
-        document.getElementById("torch-title").title = "For my master thesis research about hyperspectral compression, I have come across models written in Lua with the Torch framework, which is a predecessor to PyTorch.";
-        document.getElementById("jupyter-title").title = "Just like Jupyter Notebook is useful for data science and quick Python scripting, it has also been used for deep learning models, which I have researched for my master thesis.";
-        document.getElementById("deephyperx-title").title = "DeepHyperX is the hyperspectral deep learning framework I have expanded for my master thesis by integrating fine-grained pruning, image selection and extraction as well as other models and hyperspectral datasets. For more details, please refer to my hsi-toolbox project on GitHub.";
-        document.getElementById("visdom-title").title = "visdom visualized the hyperspectral datasets I dealt with for my master thesis. This included the ground truths, but also the classified datasets after the train-validation-test split.";
-        document.getElementById("distiller-title").title = "Intel Distiller served as the framework for coarse-grained pruning and component-specific post-training quantization (activations, weights, accumulators) for my master thesis.";
-        document.getElementById("scrum-title").title = "I have worked on numerous projects using Scrum, including its principles of daily standups, retrospectives, sprint backlog, burn-down charts etc.";
-        document.getElementById("cprofile-title").title = "cProfile was integrated in PyCharm and let me discover that the card API I was initially using for a Python-based Texas hold 'em poker bot was a performance bottleneck that needed to be replaced for a faster alternative, which I did. This saved an immense amount of time for the reinforcement learning process, which allowed the simulation in the first place, because otherwise, it would have taken too long.";
-        document.getElementById("jprofiler-title").title = "JProfiler helped identify bottlenecks in the CPM software I have worked on for a year, pushing it ahead of the competition.";
-        document.getElementById("lineprofiler-title").title = "As the name suggests, line profiler can profile a Python program line by line, which sounded appealing to me at first for the Python-based poker bot. However, cProfile's usability was far superior and the line-based granularity not needed in my scenario, so I ended up using it instead.";
-        document.getElementById("tina-title").title = "Petri net simulation software";
-        document.getElementById("hets-title").title = "Analysis of CASL specifications; theorem prover";
-        document.getElementById("slx-title").title = "Modeling language based on coroutines";
-        document.getElementById("intellij-title").title = "My favorite IDE I have been developing numerous projects with, including the CPM finance software, the project management system and many personal projects.";
-        document.getElementById("pycharm-title").title = "Used for finding strategies for the Texas hold 'em poker bot as well as connecting deep learning frameworks for my suite hsi-toolbox for my master thesis.";
-        document.getElementById("webstorm-title").title = "The IDE I am using to develop this website with HTML, JS / jQuery and CSS / Bootstrap.";
-        document.getElementById("android-studio-title").title = "Android development of an app for electronic identity management of doctors for hospitals and pharmacies; theoretical foundations like app lifecycle, intents, resources, permissions, content providers, externalization, graphics, maps etc.";
-        document.getElementById("visual-studio-code-title").title = "My choice for Node.js/Express.js apps like the database replication system I have developed.";
-        document.getElementById("xcode-title").title = "iOS development of an app for electronic identity management of doctors for hospitals and pharmacies";
-        document.getElementById("azure-title").title = "As part of the Microsoft Hackathon 'Enhance your student life' in Berlin in 2019, my group has used these Azure technologies to generate flashcards based on lecture notes so that students preparing for an exam obtain the best preparation material.";
-        document.getElementById("oci-title").title = "The COVID-19 pandemic was my chance to expand my cloud knowledge by viewing OCI courses that were available for free, including acquiring the OCI Foundations 2020 certificate. Among the topics are:\n"+
-            "Functions: Kubernetes / Registry Service;\n"+
-            "Storage: Block / File / Object / Archive Storage, Local NVMe;\n"+
-            "Networking: VCN, compartment, gateways, load balancer, peering;\n"+
-            "IAM: policies, SL, NSG;\n"+
-            "(Autonomous) Databases: VM, BM, RAC, Exadata, ADW, ATP.";
-        document.getElementById("bpmn-title").title = "Concepts and principles, as learned in my modeling course at Humboldt University.";
-        document.getElementById("z-title").title = "Formal specification language I have used to model semantic requirements for classes, including mutability and value constraints of variables.";
-        document.getElementById("mcrl-title").title = "Formal specification language for concurrent systems, used for determining equivalences like simulation, simulation equivalence and bisimulation for transition systems.";
-        document.getElementById("casl-title").title = "Common Algebraic Specification Language";
-
-        document.getElementById("certificate-deutschlandstipendium-description").innerHTML = "Awarded for outstanding results in the M.Sc. Computer Science, made possible by <a target=\"_blank\" href=\"https://www.picoquant.com/\">PicoQuant</a>";
+        document.getElementById("certificate-deutschlandstipendium-description").innerHTML = "Awarded for outstanding academic results in Computer Science, made possible by <a target=\"_blank\" href=\"https://www.picoquant.com/\">PicoQuant</a>";
 
         document.getElementById("onevshundred-text").innerHTML = "<p>The game show offers a competition, i.e. a form one can fill in with his personal data. After filling in the captcha and sending the form, the person participates in the contest. I want to automate this process so that a weekly scheduled task (e.g., through cron) participates automatically. In doing so, I have gotten to know the HTTP/2 client in Java 11, especially regarding asynchronous and functional programming.</p>\n" +
             "<p>To fill in the captcha, I have connected the API of anti-captcha.com, which requires the user to have a suitable API key. Personal data such as first name, last name, email address, address, zip code, location and phone number, which are required to fill in the form, can be added to Java resource files. The recording of relevant requests for the participation with Fiddler allowed me to reconstruct the request in Java.</p>\n" +
@@ -416,12 +159,7 @@ function switchLanguage(language) {
             "<img src=\"static/img/Projects/HateBlock/hateblock1.png\">\n" +
             "<img src=\"static/img/Projects/HateBlock/hateblock2.png\">";
 
-        document.getElementById("start-description-1").innerHTML = "I am a software engineer with experience on various full-stack projects.";
-        document.getElementById("start-description-2").innerHTML = "If you find anything on this site which sounds interesting to you, please do feel free to <a href=\"#contact\">contact me</a>! I am always excited about opportunities and look forward to working with you.";
-        document.getElementById("start-description-3").innerHTML = "The <a href=\"#work\">projects</a> you will find on this website are all done by myself.";
-
-        document.getElementById("role-1").innerHTML = "Full-Stack Software Engineer";
-        document.getElementById("role-2").innerHTML = "Backend Developer";
+        document.getElementById("role-1").innerHTML = "Senior Full-Stack Software Engineer";
 
         document.getElementById("onevshundred-heading").innerHTML = "1 vs. 100";
         document.getElementById("onevshundred-subtitle").innerHTML = "Contest participation tool";
@@ -468,7 +206,6 @@ function switchLanguage(language) {
         document.getElementById("pinboard-modal-heading").innerHTML = "Online Pinboard";
         document.getElementById("lostinspace-modal-heading").innerHTML = "Lost in Space";
         document.getElementById("lostinspace-modal-playdownload").innerHTML = "Download and play now!";
-        document.getElementById("skills-modal-heading").innerHTML = "Skills";
         document.getElementById("wurzelimperium-heading").innerHTML = "Molehill Empire";
         document.getElementById("wurzelimperium-subtitle").innerHTML = "Macro automation and task scheduling";
         document.getElementById("wurzelimperium-modal-heading").innerHTML = "Molehill Empire";
@@ -477,7 +214,6 @@ function switchLanguage(language) {
         document.getElementById("hateblock-modal-heading").innerHTML = "Hate Block";
 
         let close = "Close";
-        document.getElementById("skills-close").innerHTML = close;
         document.getElementById("onevshundred-close").innerHTML = close;
         document.getElementById("autoloop-close").innerHTML = close;
         document.getElementById("filterlist-close").innerHTML = close;
@@ -496,18 +232,16 @@ function switchLanguage(language) {
         document.getElementById("wurzelimperium-close").innerHTML = close;
         document.getElementById("hateblock-close").innerHTML = close;
 
-        document.getElementById("imprint-link").innerHTML = "Legal Notice (German)";
-        document.getElementById("privacy-link").innerHTML = "Privacy (German)";
+        document.getElementById("imprint-link").innerHTML = "Legal Notice";
+        document.getElementById("privacy-link").innerHTML = "Privacy";
         document.getElementById("privacy-heading").innerHTML = "Privacy Policy";
-
-        document.getElementById("skillSearch").placeholder = "Search for a skill here";
 
         document.getElementById("hackathon-modal-heading").innerHTML = "Flashcard generation for exam preparation";
         document.getElementById("hackathon-heading").innerHTML = "Microsoft Hackathon 2019";
         document.getElementById("hackathon-subtitle").innerHTML = "Enhance Your Student Life";
 
     } else if (language === 'de') {
-        document.getElementById("on-request-description").innerHTML = "Lebenslauf, Arbeitszeugnisse, Universitätsdiplome: auf Anfrage";
+        document.getElementById("on-request-description").innerHTML = "Lebenslauf, Referenzen, Universitätsdiplome: auf Anfrage";
         document.getElementById("hackathon-modal-heading").innerHTML = "Karteikarten-Generator zur Prüfungsvorbereitung";
         document.getElementById("hackathon-heading").innerHTML = "Microsoft Hackathon 2019";
         document.getElementById("hackathon-subtitle").innerHTML = "Enhance Your Student Life";
@@ -525,64 +259,7 @@ function switchLanguage(language) {
 
         document.getElementById("imprint-link").innerHTML = "Impressum";
 
-        document.getElementById("certificates-description").innerHTML = "Einige Zertifikate sind auch auf meinem <a target='_blank' href='https://www.youracclaim.com/users/daniel-rychlewski/'>Acclaim</a>-Profil zu finden.";
-        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Software-Ingenieur</span> in <span class='theme-color'>Zürich</span>";
-        document.getElementById("service-1-description").innerHTML = "In meiner beruflichen Laufbahn habe ich mit <b>verschiedenen Tools und Frameworks</b> gearbeitet. Sie können sich darauf verlassen, dass ich für jede Aufgabe die passenden Werkzeuge als Grundlage wähle, um die Software so <b>leicht wartbar</b> wie möglich zu machen.";
-        document.getElementById("service-2-description").innerHTML = "<b>Qualitätssicherung</b> sowie Liebe zum Detail gehören zu meiner Kernaufgabe. Ich werde für eine Abdeckung der Software durch sinnvolle Tests sorgen, um deren gewünschte Funktionalität auf eine <b>nachvollziehbare Art</b> zu untermauern.";
-        document.getElementById("service-3-description").innerHTML = "Die Implementierung von MVPs und produktiv eingesetzter Software unter <b>zeitlichem Druck</b> und begrenztem Budget ist für mich jahrelang alltägliche Arbeit gewesen. Daher können Sie sich darauf verlassen, dass ich <b>zeitliche Vorgaben einhalten</b> werde.";
-        document.getElementById("service-4-description").innerHTML = "Ich baue Ihr <b>Feedback</b> in meinen Arbeitsablauf ein, um sicherzustellen, dass wir nicht aneinander vorbeireden. Somit wird der Spielraum für Missverständnisse minimiert und Ihr Geld <b>nur für das verwendet, wofür es verwendet werden soll</b>.";
-        document.getElementById("service-5-description").innerHTML = "Den <b>neuesten technischen Trends</b> durch Weiterbildung und eigene Projekte nachzukommen, erlaubt es mir, Ihre Vision mit dem größten Qualitätsanspruch umzusetzen und ein sowohl aus visueller als auch aus architektonischer Perspektive <b>hochmodernes Design</b> einzusetzen.";
-        document.getElementById("service-6-description").innerHTML = "Zwar erkenne ich komplexe technische Zusammenhänge, doch ich kann sie auf eine nicht-technische, <b>verständliche Weise</b> erklären. Umgekehrt bin ich auch in der Lage, Produktanforderungen technisch zu interpretieren, um potentielle Probleme <b>frühestmöglich zu erkennen</b>.";
-        document.getElementById("further-programming-skills").innerHTML = "<b>"+furtherSkills+"</b> PHP, Matlab, Groovy, Shell-Programmierung, Programmierung von Chrome-Erweiterungen, C, Haskell, Visual Basic, Prolog, C#, JSON/BSON, HTML, CSS";
-        document.getElementById("databases-relational").innerHTML = "<b>"+relationalDatabases+"</b> MySQL, MSSQL, H2, DB2 (db2top, db2expln), MariaDB";
-        document.getElementById("databases-nosql").innerHTML = "<b>"+noSQLDatabases+"</b> MongoDB";
-        document.getElementById("databases-orm").innerHTML = "<b>"+ormOdm+"</b> Mongoose, Hibernate, JPA";
-        document.getElementById("databases-administration").innerHTML = "<b>"+administration+"</b> NoSQLBooster, Compass, phpMyAdmin, IBM Data Studio";
-        document.getElementById("skills-swe").innerHTML = "<b>"+furtherSkills+"</b> XP, Wasserfallmodell, V-Modell, Spiralmodell";
-        document.getElementById("ide-skills").innerHTML = "<b>"+furtherSkills+"</b> Netbeans, <a title='C++-Simulator für diskrete Ereignisse, hauptsächlich für Netzwerksimulationen'>OMNeT++</a>, Matlab, BlueJ, SAP BusinessObjects";
-        document.getElementById("skills-testing").innerHTML = "<b>"+furtherSkills+"</b> <a title='strukturorientierter Test und Analyse von Programmen'>SOTA</a>, <a title='Bearbeitung von Klassifikationsbäumen'>TESTONA</a>, <a title='automatisierter Regressionstest von Java-Programmen'>ATOSj</a>";
-        document.getElementById("skills-version-control").innerHTML = "<b>"+furtherSkills+"</b> Bitbucket, TortoiseGit, RapidSVN";
-        document.getElementById("skills-architecture").innerHTML = "REST-Schnittstellen, Microservice, Client-Server, Monolith, Long Polling, WebSocket";
-
-        document.getElementById("angular-title").title = "Entwicklung von Webseiten, sowohl von Grund auf als auch die Wartung bestehender Seiten / Bugfixes. Habe ich z.B. verwendet beim MVP für das Datenbankreplikationssystem zum Spitalneubau, aber auch für das Projektmanagementsystem.";
-        document.getElementById("javascript-title").title = "Mein Chrome-Addon 'Stop AutoLoop', welches YouTube Videoschleifen verhindert, ist in JavaScript geschrieben.";
-        document.getElementById("cpp-title").title = "An der Humboldt-Universität sowie der Swansea University während meines Austauschsemesters habe ich Konzepte wie Polymorphismus, Smart Pointer, variadic templates, RAII, vTable und vPtr, Move-Semantik, Casting-Typen, operator overloading, Lambdas, Threads, STL-Datenstrukturen und mehr kennengelernt."
-        document.getElementById("pytorch-title").title = "Dieses Deep-Learning-Framework stellte die Grundlage meiner Masterarbeit dar, da Autoren komplizierter Modelle (z.B. mit Tensor-Splitting-Operationen) PyTorch zur Implementierung ihrer Ideen verwendet haben. Zusammengefasst ergibt sich eine Vielzahl an Deep-Learning-Modellen im DeepHyperX-Framework. Meiner Erfahrung nach ist PyTorch nicht gut geeignet zur Kompression z.B. mittels parameter pruning, da es erfordert, dass Tensorgrößen für den Input und Output im Code / Modell enthalten sind, was dynamische Anpassungen durch z.B. channel pruning erschwert (Keras wäre meines Erachtens eine bessere Wahl dafür). Insbesondere sind komprimierte PyTorch-Modelldateien nicht kleiner als deren jeweiliges Original, was einen Vorteil der Modellkompression zunichte macht.";
-        document.getElementById("keras-title").title = "Dieses auf TensorFlow aufgebaute Deep-Learning-Framework hat mir geholfen, Layer und Parameter von Deep-Learning-Modellen für die Klassifizierung von Satellitenbildern in meinem Studienprojekt einfach zu erstellen.";
-        document.getElementById("keras-surgeon-title").title = "Für mein Studienprojekt über die Klassifizierung von Satellitenbildern mit komprimierten neuronalen Netzen bot keras-surgeon die Möglichkeit von parameter pruning an, basierend auf der Metrik 'average-percentage-of-zeros'. Somit konnte ich prüfen, ob ein kleineres Modell die gleiche Klassifikationsgenauigkeit erreicht, während ich Parameter wie Epochs, Batch Size und die Pruning-Prozentzahl variierte sowie Quantisierung zusätzlich durchgeführt habe. Im Gegensatz zu PyTorch wird das Modell nach einer Kompression durch parameter pruning physisch kleiner.";
-        document.getElementById("tfjs-title").title = "Mein Hate Block Chrome-Plugin nutzt TensorFlow.js zur clientseitigen Inferenz zum Herausfinden, ob ein Text hasserfüllt ist.";
-        document.getElementById("tflite-title").title = "Dies ist das Framework zum mobilen Deployment von Deep-Learning-Modellen in tflite-Dateien für meine Masterarbeit.";
-        document.getElementById("scikit-title").title = "SVM, SVD, k-NN und andere Klassifizierer für meine Masterarbeit über Kompression neuronaler Netzwerke zur hyperspektralen Bildklassifizierung.";
-        document.getElementById("pandas-title").title = "Zur Berechnung von Durchschnitten, Standardabweichungen und einem Excel-Logging für meine Masterarbeit über Kompression neuronaler Netzwerke zur hyperspektralen Bildklassifizierung.";
-        document.getElementById("torch-title").title = "Zur Recherche für meine Masterarbeit über hyperspektrale Kompression bin ich Modellen über den Weg gelaufen, die in der Sprache Lua mit dem Torch-Framework programmiert worden sind, was ein Vorläufer von PyTorch ist.";
-        document.getElementById("jupyter-title").title = "So wie Jupyter Notebook nützlich für Data Science und schnelles Python-Skripting ist, wurde es auch für viele Deep-Learning-Modelle verewndet, die ich für meine Masterarbeit recherchiert habe.";
-        document.getElementById("deephyperx-title").title = "DeepHyperX ist das hyperspektrale Deep-Learning-Framework, das ich für meine Masterarbeit erweitert habe, indem ich feingranulares Pruning, image selection und image extraction sowie andere Modelle und hyperspektrale Datensets integriert habe. Für weitere Details, bitte rufen Sie mein hsi-toolbox-Projekt auf GitHub auf.";
-        document.getElementById("visdom-title").title = "visdom visualisierte die hyperspektralen Datensets für meine Masterarbeit. Dies beinhaltete die Ground Truths, aber auch die klassifizierten Datensets nach dem Split in Training, Validierung und Test.";
-        document.getElementById("distiller-title").title = "Intel Distiller diente als Framework zum grobgranularem Pruning und zur komponentenspezifischen Quantisierung (Aktivierungen, Gewichte, Akkumulatoren) für meine Masterarbeit.";
-        document.getElementById("scrum-title").title = "Ich habe an verschiedenen Projekten mit Scrum gearbeitet, insbesondere mit Prinzipien wie Daily Standups, Retrospektiven, Sprint Backlog, Burndown-Charts usw.";
-        document.getElementById("cprofile-title").title = "cProfile war in PyCharm integriert und erlaubte mir festzustellen, dass die API für die Karten, die ich ursprünglich für den Texas Hold'em-Bot verwendet habe, ein Performance-Bottleneck war, welches ich durch den Einsatz einer schnelleren Alternative beseitigt habe. Dies hat sehr viel Zeit für das Reinforcement Learning gespart, was eine Simulation überhaupt erst ermöglicht hat. Ansonsten hätte die Simulation zu lange gedauert.";
-        document.getElementById("jprofiler-title").title = "JProfiler half mir, Bottlenecks in der CPM-Software zu entdecken, an der ich ein Jahr lang gearbeitet habe, was einen Vorsprung gegenüber der Konkurrenz verschafft hat.";
-        document.getElementById("lineprofiler-title").title = "Wie der Name sagt, kann line profiler ein Python-Programm Zeile für Zeile profilen, was für mich bzgl. meines Python-basierten Poker-Bots zunächst verlockend klang. Jedoch war die Nutzbarkeit von cProfile deutlich überlegen und die zeilenbasierte Granularität in meinem Szenario nicht nötig, sodass ich dies stattdessen verwendet habe.";
-        document.getElementById("tina-title").title = "Software zur Simulation von Petrinetzen";
-        document.getElementById("hets-title").title = "Analyse von CASL-Spezifikationen; Theorembeweiser";
-        document.getElementById("slx-title").title = "Modellierungssprache auf Basis von Koroutinen";
-        document.getElementById("intellij-title").title = "Mein IDE der Wahl für verschiedene Projekte, u.a. eine CPM-Software, ein Projektmanagementsystem und viele eigene Projekte.";
-        document.getElementById("pycharm-title").title = "Zur Strategienfindung für den Texas Hold'em-Bot verwendet sowie zum Anbinden von Deep-Learning-Frameworks an meine Suite 'hsi-toolbox' zur Masterarbeit.";
-        document.getElementById("webstorm-title").title = "Das IDE, mit dem ich diese Webseite mit HTML, JS / jQuery und CSS / Bootstrap entwickle.";
-        document.getElementById("android-studio-title").title = "Android-Entwicklung einer App zum elektronischen Identitätsmanagement von Ärzten in Spitälern und Apotheken; theoretische Grundlagen wie der App-Lifecycle, Intents, Resourcen, Berechtigungen, Content-Provider, Externalisierung, Grafiken, Maps etc.";
-        document.getElementById("visual-studio-code-title").title = "Meine Wahl für Node.js/Express.js-Applikationen wie das Datenbankreplikationssystem, das ich entwickelt habe.";
-        document.getElementById("xcode-title").title = "iOS-Entwicklung einer App zum elektronischen Identitätsmanagement von Ärzten in Spitälern und Apotheken.";
-        document.getElementById("azure-title").title = "Als Teil des Microsoft Hackathons 'Enhance your student life' 2019 in Berlin hat meine Gruppe diese Technologien verwendet, um Karteikarten auf Basis von Notizen zu Vorlesungen zu generieren, sodass Studenten das beste Lernmaterial für die Prüfungsvorbereitung erhalten.";
-        document.getElementById("oci-title").title = "Die COVID-19-Pandemie war meine Chance, das Cloud-Wissen durch OCI-Kurse zu erweitern, die für einen kurzen Zeitraum umsonst waren, zu erweitern. Insbesondere konnte ich die Prüfung zum OCI Foundations 2020-Zertifikat erfolgreich und kostenlos ablegen. Die Themen sind:\n"+
-            "Functions: Kubernetes / Registry-Service;\n"+
-            "Storage: Block / File / Object / Archive-Storage, lokaler NVMe;\n"+
-            "Networking: VCN, Compartment, Gateways, Load Balancer, Peering;\n"+
-            "IAM: Policies, SL, NSG;\n"+
-            "(Autonomous) Databases: VM, BM, RAC, Exadata, ADW, ATP.";
-        document.getElementById("bpmn-title").title = "Konzepte und Prinzipien, wie ich sie in einem Modellierungskurs an der Humboldt-Universität gelernt habe.";
-        document.getElementById("z-title").title = "Formale Spezifikationssprache, die ich benutzt habe, um semantische Zusammenhänge für Klassen zu modellieren. Dies beinhaltet v.a. Bedingungen zur Veränderbarkeit sowie Werte, die Variablen annehmen dürfen.";
-        document.getElementById("mcrl-title").title = "Formale Spezifikationssprache für nebenläufige Systeme. Ich habe sie verwendet zum Herausfinden von Äquivalenzen wie Simulation, Simulationsäquivalenz und Bisimulation für Transitionssysteme.";
-        document.getElementById("casl-title").title = "Common Algebraic Specification Language";
+        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Software-Ingenieur</span>";
 
         document.getElementById("certificate-deutschlandstipendium-description").innerHTML = "Verliehen für herausragende Leistungen im Studiengang Informatik (M.Sc.), ermöglicht durch <a target=\"_blank\" href=\"https://www.picoquant.com/\">PicoQuant</a>";
 
@@ -712,12 +389,7 @@ function switchLanguage(language) {
             "<img src=\"static/img/Projects/HateBlock/hateblock1.png\">\n" +
             "<img src=\"static/img/Projects/HateBlock/hateblock2.png\">";
 
-        document.getElementById("start-description-1").innerHTML = "Ich bin ein Software-Ingenieur mit vielfältiger Erfahrung in Full-Stack-Projekten.";
-        document.getElementById("start-description-2").innerHTML = "Falls Sie etwas auf dieser Seite interessiert, freue ich mich auf Ihre <a href=\"#contact\">Kontaktaufnahme</a>! Ich bin immer gespannt auf neue Chancen und freue mich auf die Zusammenarbeit mit Ihnen.";
-        document.getElementById("start-description-3").innerHTML = "Die <a href=\"#work\">Projekte</a>, die Sie auf dieser Webseite finden, wurden alle von mir selbst durchgeführt.";
-
-        document.getElementById("role-1").innerHTML = "Full-Stack Software-Ingenieur";
-        document.getElementById("role-2").innerHTML = "Backend-Entwickler";
+        document.getElementById("role-1").innerHTML = "Senior Full-Stack Software-Ingenieur";
 
         document.getElementById("onevshundred-heading").innerHTML = "1 gegen 100";
         document.getElementById("onevshundred-subtitle").innerHTML = "Teilnahme am Zuschauerwettbewerb";
@@ -764,7 +436,6 @@ function switchLanguage(language) {
         document.getElementById("pinboard-modal-heading").innerHTML = "Online-Pinnwand";
         document.getElementById("lostinspace-modal-heading").innerHTML = "Lost in Space";
         document.getElementById("lostinspace-modal-playdownload").innerHTML = "Jetzt herunterladen und spielen!";
-        document.getElementById("skills-modal-heading").innerHTML = "Kenntnisse";
         document.getElementById("wurzelimperium-heading").innerHTML = "Wurzelimperium";
         document.getElementById("wurzelimperium-subtitle").innerHTML = "Makro-Automatisierung und Aufgabenplanung";
         document.getElementById("wurzelimperium-modal-heading").innerHTML = "Wurzelimperium";
@@ -773,7 +444,6 @@ function switchLanguage(language) {
         document.getElementById("hateblock-modal-heading").innerHTML = "Hate Block";
 
         let close = "Schließen";
-        document.getElementById("skills-close").innerHTML = close;
         document.getElementById("onevshundred-close").innerHTML = close;
         document.getElementById("autoloop-close").innerHTML = close;
         document.getElementById("filterlist-close").innerHTML = close;
@@ -796,68 +466,9 @@ function switchLanguage(language) {
         document.getElementById("privacy-link").innerHTML = "Datenschutz";
         document.getElementById("privacy-heading").innerHTML = "Datenschutzerklärung";
 
-        document.getElementById("skillSearch").placeholder = "Kenntnis suchen";
-
     } else if (language === 'pl') {
-        document.getElementById("on-request-description").innerHTML = "Życiorys, referencje pracodawców, dyplomy: dostępne na życzenie";
-        document.getElementById("certificates-description").innerHTML = "Niektóre z moich certyfikatów są również wymienione na moim profilu <a target='_blank' href='https://www.youracclaim.com/users/daniel-rychlewski/'>Acclaim</a>.";
-        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Inżynier oprogramowania</span> w <span class='theme-color'>Zurichu</span>";
-        document.getElementById("service-1-description").innerHTML = "Pracowałem <b>z różnymi narzędziami i frameworkami</b> w czasie mojej kariery. Wybranie właściwych dla każde wymaganie dla najlepszej <b>naprawialności</b> programu jest serwisem, z którym Państwo może liczyć.";
-        document.getElementById("service-2-description").innerHTML = "<b>Zapewnianie jakości</b> zawsze stanowiło ważną część mojej pracy. Mogą Państwo na mnie liczyć, że będe implementował właściwe testy jako część mojego serwisu, aby ulepszyć <b>zrozumiałość</b> Państwa aplikacji.";
-        document.getElementById("service-3-description").innerHTML = "Implementowanie produktów o minimalnej koniecznej funkcjonalności (MVP) jak i realnych produktów pod <b>presją czasu</b> w ramach ustalonego budżetu był latami moim chlebem powszednim. Nawet w przypadku któtkich terminów możecie Państwo oczekiwać <b>dostarczenie produktu na czas</b>.";
-        document.getElementById("service-4-description").innerHTML = "Regularnie integruje Państwa <b>opinie</b> do mojego przepływu pracy, aby zapewnić, że jestem na dobrej drodze, żeby spełnić Państwa wymagania. Przez to, jakiekolwiek nieporozumienie szybko zostaje wyjaśnione, co gwarantuje Państwu <b>opłacalność</b>.";
-        document.getElementById("service-5-description").innerHTML = "Nadążanie za <b>najnowszymi trendami technicznymi</b> przez samodzielną naukę i praktyczne projekty pozwala mi na implementację Państwa wizji na najwyższym poziomie jakości z <b>nowoczesnym design</b>, zarówno na powierzchni jak i pod maską.";
-        document.getElementById("service-6-description").innerHTML = "Będąc świadomy otaczającej mnie bańce technologicznej w której działam, jestem w stanie <b>przetłumaczyć wymagania biznesowe</b> w zrozumiały język i odwrotnie. Przecież moje serwisy mają <b>slużyć klientowi</b>.";
-        document.getElementById("further-programming-skills").innerHTML = "<b>"+furtherSkills+"</b> PHP, Matlab, Groovy, Shell Scripting, programowanie rozszerzeń Chrome, C, Haskell, Visual Basic, Prolog, C#, JSON/BSON, HTML, CSS";
-        document.getElementById("databases-relational").innerHTML = "<b>"+relationalDatabases+"</b> MySQL, MSSQL, H2, DB2 (db2top, db2expln), MariaDB";
-        document.getElementById("databases-nosql").innerHTML = "<b>"+noSQLDatabases+"</b> MongoDB";
-        document.getElementById("databases-orm").innerHTML = "<b>"+ormOdm+"</b> Mongoose, Hibernate, JPA";
-        document.getElementById("databases-administration").innerHTML = "<b>"+administration+"</b> NoSQLBooster, Compass, phpMyAdmin, IBM Data Studio";
-        document.getElementById("skills-swe").innerHTML = "<b>"+furtherSkills+"</b> XP, model kaskadowy, model V, model spiralny";
-        document.getElementById("ide-skills").innerHTML = "<b>"+furtherSkills+"</b> Netbeans, <a title='symulator zdarzeń dyskretnych C++, przede wszystkim dla symulacji sieci'>OMNeT++</a>, Matlab, BlueJ, SAP BusinessObjects";
-        document.getElementById("skills-testing").innerHTML = "<b>"+furtherSkills+"</b> <a title='strukturalny test i analiza programów'>SOTA</a>, <a title='edytor drzew klasyfikacyjnych'>TESTONA</a>, <a title='automatyczne testowanie regresyjne programów Java'>ATOSj</a>";
-        document.getElementById("skills-version-control").innerHTML = "<b>"+furtherSkills+"</b> Bitbucket, TortoiseGit, RapidSVN";
-        document.getElementById("skills-architecture").innerHTML = "REST API, mikroserwisy, klient-serwer, monolit, long polling, WebSocket";
-
-        document.getElementById("angular-title").title = "Opracowanie stron internetowych, zarówno od początku, jak i utrzymanie / naprawianie blędów. Na przykład dla wersji MVP systemu dla replikacji baz danych dla przebudowy szpitalu, ale również dla systemu zarządzania projektami.";
-        document.getElementById("javascript-title").title = "Moje rozszerzenie do Chrome 'Stop AutoLoop', które zapobiega pętli wideo na YouTubie, jest napisane wyłącznie w JavaScript";
-        document.getElementById("cpp-title").title = "Zarówno w Uniwersytecie Humboldta jak i w trakcie mojej wymiany semestralnej w Uniwersytecie Swansea nauczyłem się o polimorfiźmie, sprytnych wskaźników, szablonach, RAII, vTable i vPtr, semantyka move, konwersje typu, przeciążenie operatorów, lambdy, wątki, struktury danych STL i itd.";
-        document.getElementById("pytorch-title").title = "Ten framework do deep learning był podstawą mojej pracy magisterskiej ponieważ autorzy skomplikowanych modelów (np. z operacjami dzielącymi tensory) wybrali PyTorch do implementacji ich idei. Razem wzięte, to umożliwiało selekcję z wielu modelów deep learning w pakiecie DeepHyperX. Z mojego doświadczenia, PyTorch nie był dobrym wyborem dla zadań o kompresji tak jak parameter pruning bo potrzebuje rozmiary tensorów wejściowych i wyjściowych zawierane w kodzie, czyli w modelu, co utrudnia dynamiczne dopasowanie rozmiarów, np. w czasie wykonania channel pruning (Keras moim zdaniem byłaby lepszą opcją). Co najważniejsze, sprężane modele PyTorch nie są mniejsze niż oryginały, przeciwdziałając jednej z najważniejszych zalet kompresji modelów.";
-        document.getElementById("keras-title").title = "Ten wysokopoziomowy framework do deep learning zbudowany na TensorFlow umożliwił mi łatwą konfigurację warstw i parametrów modeli dla klasyfikacji zdjęć satelitarnych w moim projekcie badań.";
-        document.getElementById("keras-surgeon-title").title = "Dla mojego projektu badań o klasyfikacji zdjęć satelitarnych przez sprężane sieci neuronowe, keras-surgeon oferował parameter pruning na podstawie metryki average percentage of zeros. Przez to mogłem sprawdzić czy mniejszy model uzyskuje taką samą trafność klasyfikacji, zmieniając parametry jak epoki, wielkość serii, prozent dla pruning i dodanie quantization. W przeciwieństwie do PyTorch, fizyczny rozmiar modelu zmniejsza się po pruning.";
-        document.getElementById("tfjs-title").title = "Moje rozszerzenie Hate Block do Chrome wykorzystuje TensorFlow.js do wnioskowania po stronie klienta, aby dowiedzieć się, czy tekst jest nienawistny.";
-        document.getElementById("tflite-title").title = "Dla mobilnego opracowywania modelów deep learning do plików tflite, to jest framework, którego używałem dla mojej pracy magisterskiej.";
-        document.getElementById("scikit-title").title = "SVM, SVD, k-NN i inne klasyfikatory dla mojej pracy magisterskiej o kompresji sieci neuronowych dla hiperspektralnej klasyfikacji zdjęć.";
-        document.getElementById("pandas-title").title = "Obliczenie średniej, odchylenia standardowego, logowanie Excel dla mojej pracy magisterskiej o kompresji sieci neuronowych dla hiperspektralnej klasyfikacji zdjęć.";
-        document.getElementById("torch-title").title = "Dla mojej pracy magisterskiej o hiperspektralnej kompresji, widziałem modele w języku Lua i frameworku Torch, co jest poprzednikiem PyTorcha.";
-        document.getElementById("jupyter-title").title = "Tak jak Jupyter Notebook jest użyteczny dla data science i szybkiego skryptowania Pythonem, również się nadaje do modelów deep learning, które zbadałem dla mojej pracy magisterskiej.";
-        document.getElementById("deephyperx-title").title = "DeepHyperX jest hiperspektralnym frameworkiem dla deep learning. Rozwinąłem ten framework dla mojej pracy magisterskiej prez zintegrowanie drobnoziarnistego pruningu, wyboru i wydzielania zdjęć jak i innych modelów i hiperspektralnych zestawów danych. Więcej szczegółów umieściłem na moim projekcie hsi-toolbox na GitHubie.";
-        document.getElementById("visdom-title").title = "visdom wyświetlał hiperspektralne zestawy danych, którym się zajmowałem w mojej pracy magisterskiej. Do tego należał monitoring nadziemny (ground truth), ale też klasyfikowane zestawy danych po rodzieleniu w części train, validation, i test.";
-        document.getElementById("distiller-title").title = "Intel Distiller stanowił framework dla gruboziarnistego pruningu i szczególnej dla komponentów kwantyzacji po treningu (aktywacje, wagi, akumulatory) dla mojej pracy magisterskiej.";
-        document.getElementById("scrum-title").title = "Pracowałem w różnych projectach w Scrum, wraz z jego zasadami jak daily standups, retrospektywy, wykaz prac sprintu, burn-down charty etc.";
-        document.getElementById("cprofile-title").title = "cProfile był zintegrowany w PyCharm i dał mi spostrzec że API kart, którą na początek używałem dla Pythonowego botu pokera dla Texas hold 'em, była utrudnieniem wydajności, które musiało być zastąpiony przez szybszą alternatywę, co zrobiłem. Jako rezultat, aż tyle czasu mogło być oszczędzone dla procesu reinforcement learning, że dopero to umożliwiło symulację. Bez wymiany API trwałaby za długo.";
-        document.getElementById("jprofiler-title").title = "JProfiler pomógł zidentyfikować utrudnienia w rozwiązaniu CPM, na którym pracowałem przez rok. Przez to staneło się rozwiązaniem dużo szybsze, goniąc konkurencję.";
-        document.getElementById("lineprofiler-title").title = "Jak nazwa wskazuje, line profiler umie profilować program Pythonowy linijka po linijce, co najpierw brzmiało dla mnie interesujące dla Pythonowego bota grającego w pokera. Niestety okazało się gorszym rozwiązaniem niż cProfile w sprawie użyteczności i ziarnistość linijkowa nie była potrzebna w moim scenariuszu. Dlatego jednak zdecydowałem się na cProfile.";
-        document.getElementById("tina-title").title = "Oprogramowanie symulacji sieców Petriego";
-        document.getElementById("hets-title").title = "Analiza specyfikacji CASL; udowadniacz twierdzeń";
-        document.getElementById("slx-title").title = "Język modelowania zbudowany na współprogramach";
-        document.getElementById("intellij-title").title = "Mój ulubiony IDE, z którym programowałem liczne projekty, np. rozwiązanie CPM, system zarządzania projektami i dużo własnych projektów.";
-        document.getElementById("pycharm-title").title = "Dla szukania strategii dla bota pokerowego do gry w Texas hold 'em i dla łączenia frameworków deep learning dla mojego frameworku hsi-toolbox dla pracy magisterskiej.";
-        document.getElementById("webstorm-title").title = "IDE, którym programuję tą stronę internetową z HTML, JS / jQuery i CSS / Bootstrap.";
-        document.getElementById("android-studio-title").title = "Tworzenie aplikacji Android dla elektronicznego zarządzania tożsamością lekarzy dla szpitalów i aptek; teoretyczne podstawy jak cykl aplikacji, zamiary, zasoby, uprawnienia, dostawcy treści, eksternalizacja, grafiki, mapy itd.";
-        document.getElementById("visual-studio-code-title").title = "Mój wybór dla aplikacji Node.js/Express.js jak przeze mnie oprogramowany system replikacji baz danych.";
-        document.getElementById("xcode-title").title = "Programowanie aplikacji iOS dla elektronicznego zarządzania tożsamością lekarzy dla szpitalów i aptek";
-        document.getElementById("azure-title").title = "Jako część hackatonu Microsoft pod tytułem 'Enhance your student life' w Berlinie w 2019 roku, moja grupa używała te trzy technologie Azure, aby generować fiszki na podstawie notatków z wykładów, żeby studenci mogli się łatwiej przygotować na egzamin, korzystając z najlepszego materiału przygotowawczego.";
-        document.getElementById("oci-title").title = "Pandemia COVID-19 była moją szansą, aby rozwijać moją wiedzę w temacie cloud przez oglądanie kursów OCI, które były dostępne za darmo. Również zdobyłem certyfikat OCI Foundations 2020. Tematy to:\n"+
-            "funkcje: serwis Kubernetes / Registry;\n"+
-            "pamięć: Block / File / Object / Archive Storage, lokalne NVMe;\n"+
-            "sieć: VCN, kompartmenty, gatewaye, load balancery, peering;\n"+
-            "IAM: zasady, SL, NSG;\n"+
-            "(samodzielne) bazy danych: VM, BM, RAC, Exadata, ADW, ATP.";
-        document.getElementById("bpmn-title").title = "Koncepcje i zasady uczone w Uniwersytecie Humboldta.";
-        document.getElementById("z-title").title = "Formalny język specyfikacji, którego używałem do modelowania semantycznych wymagań dla klas, włączając zmienność i ograniczenia wartościowe dla zmiennych.";
-        document.getElementById("mcrl-title").title = "Formalny język specyfikacji dla systemów jednoczesnych, używany dla określenia równoważności jak symulacji, symulacyjnej równoważności i bisymulacji dla systemów przejściowych.";
-        document.getElementById("casl-title").title = "Common Algebraic Specification Language";
+        document.getElementById("on-request-description").innerHTML = "Życiorys, referencje, dyplomy: dostępne na życzenie";
+        document.getElementById("about-me-description").innerHTML = "<span class='theme-color'>Inżynier oprogramowania</span>";
 
         document.getElementById("certificate-deutschlandstipendium-description").innerHTML = "Przyznany z uwagi na wybitne rezultaty w studiach informatyki (M.Sc.), umożliwiony przez sponsora <a target=\"_blank\" href=\"https://www.picoquant.com/\">PicoQuant</a>";
 
@@ -987,12 +598,7 @@ function switchLanguage(language) {
             "<img src=\"static/img/Projects/HateBlock/hateblock1.png\">\n" +
             "<img src=\"static/img/Projects/HateBlock/hateblock2.png\">";
 
-        document.getElementById("start-description-1").innerHTML = "Jestem inżynierem oprogramowania z doświadczeniem w różnych projektach typu full-stack.";
-        document.getElementById("start-description-2").innerHTML = "Jeżeli znajdziecie Państwo coś interesującego, proszę o <a href=\"#contact\">kontakt</a>! Nie mogę się doczekać nowych szans i współpracy z Tobą.";
-        document.getElementById("start-description-3").innerHTML = "Wszystkie <a href=\"#work\">projekty</a>, które znajdziesz na tej stronie, są wykonane przeze mnie.";
-
-        document.getElementById("role-1").innerHTML = "Inżynier oprogramowania full-stack";
-        document.getElementById("role-2").innerHTML = "Programista backend";
+        document.getElementById("role-1").innerHTML = "Starszy Inżynier Oprogramowania Full-Stack";
 
         document.getElementById("onevshundred-heading").innerHTML = "1 kontra 100";
         document.getElementById("onevshundred-subtitle").innerHTML = "Narzędzie uczestnictwa w konkursie";
@@ -1039,7 +645,6 @@ function switchLanguage(language) {
         document.getElementById("pinboard-modal-heading").innerHTML = "Tablica korkowa online";
         document.getElementById("lostinspace-modal-heading").innerHTML = "Lost in Space";
         document.getElementById("lostinspace-modal-playdownload").innerHTML = "Pobierz i graj!";
-        document.getElementById("skills-modal-heading").innerHTML = "Umiejętności";
         document.getElementById("hackathon-modal-heading").innerHTML = "Flashcard generation for exam preparation";
         document.getElementById("hackathon-heading").innerHTML = "Microsoft Hackathon 2019";
         document.getElementById("hackathon-subtitle").innerHTML = "Enhance Your Student Life";
@@ -1051,7 +656,6 @@ function switchLanguage(language) {
         document.getElementById("hateblock-modal-heading").innerHTML = "Hate Block";
 
         let close = "Zamknij";
-        document.getElementById("skills-close").innerHTML = close;
         document.getElementById("onevshundred-close").innerHTML = close;
         document.getElementById("autoloop-close").innerHTML = close;
         document.getElementById("filterlist-close").innerHTML = close;
@@ -1070,16 +674,11 @@ function switchLanguage(language) {
         document.getElementById("wurzelimperium-close").innerHTML = close;
         document.getElementById("hateblock-close").innerHTML = close;
 
-        document.getElementById("imprint-link").innerHTML = "Uwaga prawna (po niemiecku)";
-        document.getElementById("privacy-link").innerHTML = "Prywatność (po niemiecku)";
+        document.getElementById("imprint-link").innerHTML = "Uwaga prawna";
+        document.getElementById("privacy-link").innerHTML = "Prywatność";
         document.getElementById("privacy-heading").innerHTML = "Polityka prywatności";
-
-        document.getElementById("skillSearch").placeholder = "Szukaj umiejętności";
     }
 
-    document.getElementById("skills-text").innerHTML = generateCSVSkills();
-    document.getElementById("try-visualization").innerHTML = tryVisualization()[language];
-    document.getElementById("try-image-processing").innerHTML = tryImageProcessing()[language];
     document.getElementById("contact-me").onclick = function() { openEmail(language) };
 
     document.getElementById("imprint-heading").innerHTML = "Impressum";
@@ -1116,44 +715,7 @@ function switchLanguage(language) {
         "<p>Trotz umfangreicher technischer und organisatorischer Sicherungsvorkehrungen, k&ouml;nnen m&ouml;glicherweise Daten verloren gehen oder von Unbefugten abgefangen und/oder manipuliert werden. Wir treffen soweit m&ouml;glich geeignete technische und organisatorische Sicherheitsmassnahmen, um dies innerhalb unseres Systems zu verhindern. Ihr Computer befindet sich indessen ausserhalb des von uns kontrollierbaren Sicherheitsbereichs. Es obliegt Ihnen als Benutzer, sich &uuml;ber die erforderlichen Sicherheitsvorkehrungen zu informieren und diesbez&uuml;glich geeignete Massnahmen zu treffen. Als Website-Betreiber haften wir keinesfalls f&uuml;r Sch&auml;den, die Ihnen aus Datenverlust oder -manipulation entstehen k&ouml;nnen.</p>" +
         "<p>Daten welche Sie in Online-Formularen angeben, k&ouml;nnen zwecks Auftragsabwicklung an beauftragte Dritte weitergegeben und von diesen eingesehen und allenfalls bearbeitet werden.</p><h5>&Auml;nderungen</h5><p>Wir k&ouml;nnen diese Datenschutzerkl&auml;rung jederzeit ohne Vorank&uuml;ndigung anpassen. Es gilt die jeweils aktuelle, auf unserer Website publizierte Fassung. Soweit die Datenschutzerkl&auml;rung Teil einer Vereinbarung mit Ihnen ist, werden wir Sie im Falle einer Aktualisierung über die &Auml;nderung per E-Mail oder auf andere geeignete Weise informieren.</p>" +
         "<h5>Fragen an den Datenschutzbeauftragten</h5> <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die f&uuml;r den Datenschutz zu Beginn der Datenschutzerkl&auml;rung aufgef&uuml;hrten, verantwortlichen Person in unserer Organisation.</p>" +
-        "<p>Z&uuml;rich, 02.06.2020</p><p class='small'>Quelle, die sehr unangenehm mit ihrem Datenschutz-Generator bzgl. Quellenangabe und aller eingeblendeten Warnungen gängelt, sodass ich sie überhaupt nicht empfehlen kann: <a href=\"https://www.swissanwalt.ch\" target=\"_blank\" rel=\"noopener\">SwissAnwalt</a></p>";
-}
-
-function enableLongtapForTitles() {
-    $("#angular-title").longpress(function() {alert($(this).attr('title'));});
-    $("#javascript-title").longpress(function() {alert($(this).attr('title'));});
-    $("#cpp-title").longpress(function() {alert($(this).attr('title'));});
-    $("#pytorch-title").longpress(function() {alert($(this).attr('title'));});
-    $("#keras-title").longpress(function() {alert($(this).attr('title'));});
-    $("#keras-surgeon-title").longpress(function() {alert($(this).attr('title'));});
-    $("#tfjs-title").longpress(function() {alert($(this).attr('title'));});
-    $("#tflite-title").longpress(function() {alert($(this).attr('title'));});
-    $("#scikit-title").longpress(function() {alert($(this).attr('title'));});
-    $("#pandas-title").longpress(function() {alert($(this).attr('title'));});
-    $("#torch-title").longpress(function() {alert($(this).attr('title'));});
-    $("#jupyter-title").longpress(function() {alert($(this).attr('title'));});
-    $("#deephyperx-title").longpress(function() {alert($(this).attr('title'));});
-    $("#visdom-title").longpress(function() {alert($(this).attr('title'));});
-    $("#distiller-title").longpress(function() {alert($(this).attr('title'));});
-    $("#scrum-title").longpress(function() {alert($(this).attr('title'));});
-    $("#cprofile-title").longpress(function() {alert($(this).attr('title'));});
-    $("#jprofiler-title").longpress(function() {alert($(this).attr('title'));});
-    $("#lineprofiler-title").longpress(function() {alert($(this).attr('title'));});
-    $("#tina-title").longpress(function() {alert($(this).attr('title'));});
-    $("#hets-title").longpress(function() {alert($(this).attr('title'));});
-    $("#slx-title").longpress(function() {alert($(this).attr('title'));});
-    $("#intellij-title").longpress(function() {alert($(this).attr('title'));});
-    $("#pycharm-title").longpress(function() {alert($(this).attr('title'));});
-    $("#webstorm-title").longpress(function() {alert($(this).attr('title'));});
-    $("#android-studio-title").longpress(function() {alert($(this).attr('title'));});
-    $("#visual-studio-code-title").longpress(function() {alert($(this).attr('title'));});
-    $("#xcode-title").longpress(function() {alert($(this).attr('title'));});
-    $("#azure-title").longpress(function() {alert($(this).attr('title'));});
-    $("#oci-title").longpress(function() {alert($(this).attr('title'));});
-    $("#bpmn-title").longpress(function() {alert($(this).attr('title'));});
-    $("#z-title").longpress(function() {alert($(this).attr('title'));});
-    $("#mcrl-title").longpress(function() {alert($(this).attr('title'));});
-    $("#casl-title").longpress(function() {alert($(this).attr('title'));});
+        "<p>Z&uuml;rich, 02.06.2020</p><p class='small'>Quelle: <a href=\"https://www.swissanwalt.ch\" target=\"_blank\" rel=\"noopener\">SwissAnwalt</a></p>";
 }
 
 /**

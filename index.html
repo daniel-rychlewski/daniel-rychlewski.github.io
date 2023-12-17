@@ -67,8 +67,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li><a class="nav-link active" href="#home"><div class="stati18n s18n-chapter-link-home"></div></a></li>
                         <li><a class="nav-link" href="#about"><div class="stati18n s18n-chapter-link-about-me"></div></a></li>
-                        <li><a class="nav-link" href="#skills"><div class="stati18n s18n-chapter-link-skills"></div></a></li>
-                        <li><a class="nav-link" href="#services"><div class="stati18n s18n-chapter-link-services"></div></a></li>
+                        <li><a class="nav-link" href="#added-value"><div class="stati18n s18n-chapter-link-added-value"></div></a></li>
                         <li><a class="nav-link" href="#work"><div class="stati18n s18n-chapter-link-portfolio"></div></a></li>
                         <li><a class="nav-link" href="#certificates"><div class="stati18n s18n-chapter-link-certificates"></div></a></li>
                         <li><a class="nav-link" href="#contact"><div class="stati18n s18n-chapter-link-contact"></div></a></li>
@@ -134,12 +133,8 @@
                             <h6><div class="stati18n s18n-chapter-name-welcome"></div></h6>
                             <h1>Daniel Rychlewski</h1>
                             <div class="nav ht-list" style="line-height: 1.3; margin-top: 5%">
-                                <div class="role-tag" style="margin-bottom: 5%"><span id="role-1"></span></div>
-                                <div class="role-tag" style="margin-bottom: 5%"><span id="role-2"></span></div>
+                                <div class="role-tag" style="margin-bottom: 1%"><span id="role-1"></span></div>
                             </div>
-                            <p id="start-description-1" style="margin-bottom: 1%"></p>
-                            <p id="start-description-2" style="margin-bottom: 1%"></p>
-                            <p id="start-description-3"></p>
                             <div class="btn-bar go-to">
                                 <a class="m-btn m-btn-theme" href="#work"><div class="stati18n s18n-start-my-work"></div></a>
                                 <a class="m-btn m-btn-t-theme" href="#contact"><div class="stati18n s18n-start-hire-me"></div></a>
@@ -177,11 +172,6 @@
                                 <a target="_blank" href="https://www.linkedin.com/in/daniel-rychlewski/"><i class="fab fa-linkedin-in"></i></a>
                                 <a target="_blank" href="https://www.xing.com/profile/Daniel_Rychlewski/"><i class="fab fa-xing"></i></a>
                                 <a target="_blank" href="https://github.com/daniel-rychlewski"><i class="fab fa-github"></i></a>
-                                <a target="_blank" href="https://www.facebook.com/daniel.rychlewski/"><i class="fab fa-facebook-f"></i></a>
-                                <a target="_blank" href="https://twitter.com/dan_rychl"><i class="fab fa-twitter"></i></a>
-                                <a target="_blank" href="https://www.reddit.com/user/danielrychlewski"><i class="fab fa-reddit"></i></a>
-                                <a target="_blank" href="https://www.quora.com/profile/Daniel-Rychlewski-1"><i class="fab fa-quora"></i></a>
-                                <a target="_blank" href="https://www.instagram.com/daniel.rychlewski/"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -192,24 +182,8 @@
                             <div class="row about-list">
                                 <div class="col-md-6">
                                     <div class="media">
-                                        <label><div class="stati18n s18n-about-me-birthday-key"></div></label>
-                                        <p><div class="stati18n s18n-about-me-birthday-value"></div></p>
-                                    </div>
-                                    <div class="media">
-                                        <label><div class="stati18n s18n-about-me-age-key"></div></label>
-                                        <p id="age">
-                                            <script type="text/javascript">
-                                                document.getElementById("age").innerHTML = getAge();
-                                            </script>
-                                        </p>
-                                    </div>
-                                    <div class="media">
                                         <label><div class="stati18n s18n-about-me-residence-key"></div></label>
                                         <p><div class="stati18n s18n-about-me-residence-value"></div></p>
-                                    </div>
-                                    <div class="media">
-                                        <label><div class="stati18n s18n-about-me-permit-key"></div></label>
-                                        <p><div class="stati18n s18n-about-me-permit-value"></div></p>
                                     </div>
                                     <div class="media">
                                         <label><div class="stati18n s18n-about-me-citizenships-key"></div></label>
@@ -217,10 +191,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="media">
-                                        <label><div>Skype</div></label>
-                                        <p><div>daniel.rychlewski</div></p>
-                                    </div>
                                     <div class="media">
                                         <label><div class="stati18n s18n-about-me-education-key"></div></label>
                                         <p><div class="stati18n s18n-about-me-education-value"></div></p>
@@ -238,769 +208,62 @@
             </div>
         </section>
         <!-- end about us -->
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="row sm-m-5px-b m-15px-b">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-my-skills"></div></h3>
-                            <p><div style="margin-bottom: 1%" class="stati18n s18n-skills-expand-info"></div></p>
-                            <p style="text-align: right">
-                                <div class="m-btn m-btn-theme" style="margin-bottom: 1%" onclick="showAccordion()"><div class="stati18n s18n-skills-expand"></div></div>
-                                <div class="m-btn m-btn-theme" style="margin-bottom: 1%" onclick="hideAccordion()"><div class="stati18n s18n-skills-collapse"></div></div>
-                                <div class="m-btn m-btn-theme" style="margin-bottom: 1%" data-toggle="modal" href="#skills-csv"><div class="stati18n s18n-skills-csv"></div></div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="skillSearch" placeholder="Search for a skill here">
-                </div>
-
-                <div class="row justify-content-between">
-
-                    <div class="col-md-6">
-                        <div id="accordion1" class="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#programmingLanguages" aria-expanded="false"
-                                                aria-controls="programmingLanguages">
-                                            <div class="stati18n s18n-skills-heading-programming-languages"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="programmingLanguages" class="collapse" aria-labelledby="headingOne">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 class="dark-color">Java</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="95"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>95%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="stati18n s18n-skill-java"></div>
-                                        <div class="skill-lt"><h6 class="dark-color">Python</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="stati18n s18n-skill-python"></div>
-                                        <div class="skill-lt"><h6 id="angular-title" class="dark-color">
-                                            Angular</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">TypeScript</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="javascript-title" class="dark-color">
-                                            JavaScript</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Node.js</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="85"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>85%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="cpp-title" class="dark-color">
-                                            C++</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt" id="further-programming-skills"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#databases" aria-expanded="false"
-                                                aria-controls="databases">
-                                            <div class="stati18n s18n-skills-heading-databases"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="databases" class="collapse" aria-labelledby="headingTwo">
-                                    <div class="card-body">
-                                        <p id="databases-relational"></p>
-                                        <p id="databases-nosql"></p>
-                                        <p id="databases-orm"></p>
-                                        <p id="databases-administration"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#frameworks" aria-expanded="false"
-                                                aria-controls="frameworks">
-                                            <div class="stati18n s18n-skills-heading-frameworks"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="frameworks" class="collapse" aria-labelledby="headingThree">
-                                    <div class="card-body">
-                                        Spring Boot / Data / MVC / Security, Bootstrap, Elastic Stack, Express.js,
-                                        axios, jQuery, Thymeleaf
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingDeepLearning">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseDeepLearning" aria-expanded="false"
-                                                aria-controls="collapseDeepLearning">
-                                            <div class="stati18n s18n-skills-heading-deep-learning"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseDeepLearning" class="collapse" aria-labelledby="headingDeepLearning">
-                                    <div class="card-body">
-                                        <a id="pytorch-title">PyTorch</a>,
-                                        <a id="keras-title">Keras</a>,
-                                        <a id="keras-surgeon-title">keras-surgeon</a>,
-                                        <a id="tfjs-title">TensorFlow.js,</a>,
-                                        <a id="tflite-title">TensorFlow-Lite</a>,
-                                        <a id="scikit-title">scikit-learn</a>,
-                                        <a id="pandas-title">Pandas</a>,
-                                        <a id="torch-title">Torch (Lua)</a>,
-                                        <a id="jupyter-title">Jupyter Notebook</a>,
-                                        <a id="deephyperx-title">DeepHyperX</a>,
-                                        <a id="visdom-title">visdom</a>,
-                                        <a id="distiller-title">Intel Distiller</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingProjectManagement">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseProjectManagement" aria-expanded="false"
-                                                aria-controls="collapseProjectManagement">
-                                            <div class="stati18n s18n-skills-heading-project-management"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseProjectManagement" class="collapse"
-                                     aria-labelledby="headingProjectManagement">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 class="dark-color">Jira</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="95"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>95%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Confluence</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">SonarQube</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Basecamp</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="85"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>85%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingSoftwareDevelopment">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseSoftwareDevelopment" aria-expanded="false"
-                                                aria-controls="collapseSoftwareDevelopment">
-                                            <div class="stati18n s18n-skills-heading-software-development"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseSoftwareDevelopment" class="collapse"
-                                     aria-labelledby="headingSoftwareDevelopment">
-                                    <div class="card-body">
-                                        <div id="scrum-title" class="skill-lt">
-                                            <h6 class="dark-color">Scrum</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="95"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>95%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="stati18n s18n-skill-csm"></div>
-                                        <div class="skill-lt"><h6 class="dark-color">Kanban</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">TDD</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt" id="skills-swe"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingCICD">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseCICD" aria-expanded="false"
-                                                aria-controls="collapseCICD">
-                                            <div class="stati18n s18n-skills-heading-ci-cd"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseCICD" class="collapse" aria-labelledby="headingCICD">
-                                    <div class="card-body">
-                                        Jenkins, Maven, Gradle, Travis CI, Netlify
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingPerformance">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapsePerformance" aria-expanded="false"
-                                                aria-controls="collapsePerformance">
-                                            <div class="stati18n s18n-skills-heading-performance"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapsePerformance" class="collapse" aria-labelledby="headingPerformance">
-                                    <div class="card-body">
-                                        <div id="cprofile-title" class="skill-lt">
-                                            <h6 class="dark-color">cProfile</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div id="jprofiler-title" class="skill-lt">
-                                            <h6 class="dark-color">JProfiler</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div id="lineprofiler-title" class="skill-lt">
-                                            <h6 class="dark-color">line_profiler</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingArchitecture">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseArchitecture" aria-expanded="false"
-                                                aria-controls="collapseArchitecture">
-                                            <div class="stati18n s18n-skills-heading-architecture"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseArchitecture" class="collapse" aria-labelledby="headingArchitecture">
-                                    <div class="card-body" id="skills-architecture"></div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingVirtualization">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseVirtualization" aria-expanded="false"
-                                                aria-controls="collapseVirtualization">
-                                            <div class="stati18n s18n-skills-heading-virtualization"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseVirtualization" class="collapse"
-                                     aria-labelledby="headingVirtualization">
-                                    <div class="card-body">
-                                        VMware Workstation, Oracle VirtualBox, Kubernetes, Docker
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingModeling">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseModeling" aria-expanded="false"
-                                                aria-controls="collapseModeling">
-                                            <div class="stati18n s18n-skills-heading-modeling"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseModeling" class="collapse" aria-labelledby="headingModeling">
-                                    <div class="card-body">
-                                        MagicDraw UML, Signavio Process Editor, <a id="tina-title">TINA</a>, <a id="hets-title">Hets</a>, <a id="slx-title">SLX</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingNetwork">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseNetwork" aria-expanded="false"
-                                                aria-controls="collapseNetwork">
-                                            <div class="stati18n s18n-skills-heading-network"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseNetwork" class="collapse" aria-labelledby="headingNetwork">
-                                    <div class="card-body">
-                                        Postman, Fiddler, Wireshark
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="accordion2" class="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingFour">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#ides" aria-expanded="false" aria-controls="ides">
-                                            <div class="stati18n s18n-skills-heading-ides"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="ides" class="collapse" aria-labelledby="headingFour">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 id="intellij-title" class="dark-color">
-                                            IntelliJ IDEA (+ GUI Designer)</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="95"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>95%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="pycharm-title" class="dark-color">
-                                            PyCharm</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="webstorm-title" class="dark-color">
-                                            WebStorm</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="android-studio-title" class="dark-color">
-                                            Android Studio</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="visual-studio-code-title" class="dark-color">
-                                            Visual Studio Code</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">CLion</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="85"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>85%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Eclipse</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Visual Studio</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="xcode-title" class="dark-color">
-                                            Xcode</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt" id="ide-skills"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTesting">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseTesting" aria-expanded="false"
-                                                aria-controls="collapseTesting">
-                                            <div class="stati18n s18n-skills-heading-testing"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTesting" class="collapse" aria-labelledby="headingTesting">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 class="dark-color">JUnit</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">Mockito</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 class="dark-color">PowerMockito</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt" id="skills-testing"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingVersionControl">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseVersionControl" aria-expanded="false"
-                                                aria-controls="collapseVersionControl">
-                                            <div class="stati18n s18n-skills-heading-version-control"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseVersionControl" class="collapse"
-                                     aria-labelledby="headingVersionControl">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 class="dark-color">Git</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="85"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>85%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="stati18n s18n-git-certificate"></div>
-                                        <div class="skill-lt"><h6 class="dark-color">SVN</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt" id="skills-version-control"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingCloud">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseCloud" aria-expanded="false"
-                                                aria-controls="collapseCloud">
-                                            <div class="stati18n s18n-skills-heading-cloud"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseCloud" class="collapse" aria-labelledby="headingCloud">
-                                    <div class="card-body">
-                                        <div class="skill-lt"><h6 id="azure-title" class="dark-color">
-                                            Azure: Cognitive Services, MS SQL, Functions, Blob Storage</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-lt"><h6 id="oci-title" class="dark-color">
-                                            Oracle Cloud Infrastructure: Functions, Storage, Networking, IAM,
-                                            (Autonomous) Databases</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingVisualization">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseVisualization" aria-expanded="false"
-                                                aria-controls="collapseVisualization">
-                                            <div class="stati18n s18n-skills-heading-visualization"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseVisualization" class="collapse" aria-labelledby="headingVisualization">
-                                    <div class="card-body">
-                                        <p id="try-visualization"></p>
-                                        Tableau, VolView, ParaView, Targetmap, XDAT, OpenHeatMap, infogr.am, plot.ly,
-                                        Three Graphs
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingImageProcessing">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseImageProcessing" aria-expanded="false"
-                                                aria-controls="collapseImageProcessing">
-                                            <div class="stati18n s18n-skills-heading-image-processing"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseImageProcessing" class="collapse"
-                                     aria-labelledby="headingImageProcessing">
-                                    <div class="card-body">
-                                        <p id="try-image-processing"></p>
-                                        OpenCV, ReconstructMe, Skanect, Kinect Studio
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingDataTransfer">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseDataTransfer" aria-expanded="false"
-                                                aria-controls="collapseDataTransfer">
-                                            <div class="stati18n s18n-skills-heading-data-transfer"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseDataTransfer" class="collapse" aria-labelledby="headingDataTransfer">
-                                    <div class="card-body">
-                                        FileZilla, WinSCP, PuTTY(gen), PSFTP, Pageant, MobaXterm
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingFileHosting">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseFileHosting" aria-expanded="false"
-                                                aria-controls="collapseFileHosting">
-                                            <div class="stati18n s18n-skills-heading-file-hosting"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseFileHosting" class="collapse" aria-labelledby="headingFileHosting">
-                                    <div class="card-body">
-                                        SharePoint, Dropbox, OneDrive
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingCommunication">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseCommunication" aria-expanded="false"
-                                                aria-controls="collapseCommunication">
-                                            <div class="stati18n s18n-skills-heading-communication"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseCommunication" class="collapse" aria-labelledby="headingCommunication">
-                                    <div class="card-body">
-                                        Slack, Skype for Business, Yammer, MS Teams, Zoom, Gitter
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingRemoteMaintenance">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseRemoteMaintenance" aria-expanded="false"
-                                                aria-controls="collapseRemoteMaintenance">
-                                            <div class="stati18n s18n-skills-heading-remote-maintenance"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseRemoteMaintenance" class="collapse"
-                                     aria-labelledby="headingRemoteMaintenance">
-                                    <div class="card-body">
-                                        TeamViewer, VNC Server, X2Go
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingSpecification">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseSpecification" aria-expanded="false"
-                                                aria-controls="collapseSpecification">
-                                            <div class="stati18n s18n-skills-heading-specification"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseSpecification" class="collapse" aria-labelledby="headingSpecification">
-                                    <div class="card-body">
-                                        <div id="bpmn-title" class="skill-lt"><h6 class="dark-color">
-                                            BPMN 2.0</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div id="z-title" class="skill-lt">
-                                            <h6 class="dark-color">Z</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="90"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>90%</span></div>
-                                            </div>
-                                        </div>
-                                        <div id="mcrl-title" class="skill-lt">
-                                            <h6 class="dark-color">mCRL2</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                        <div id="casl-title" class="skill-lt"><h6
-                                                class="dark-color">CASL</h6>
-                                            <div class="skill-bar">
-                                                <div class="skill-bar-in theme-bg" role="progressbar" aria-valuenow="80"
-                                                     aria-valuemin="1" aria-valuemax="100"><span>80%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingOfficeSolutions">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseOfficeSolutions" aria-expanded="false"
-                                                aria-controls="collapseOfficeSolutions">
-                                            <div class="stati18n s18n-skills-heading-office-solutions"></div>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseOfficeSolutions" class="collapse"
-                                     aria-labelledby="headingOfficeSolutions">
-                                    <div class="card-body">
-                                        Microsoft Office, OpenOffice, LibreOffice
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <!-- End fun -->
         <!-- services -->
-        <section id="services" class="section gray-bg">
+        <section id="added-value" class="section">
             <div class="container">
                 <div class="row sm-m-25px-b m-35px-b">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-my-services"></div></h3>
+                            <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-my-added-value"></div></h3>
                             <p class="text-uppercase small"></p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="col-sm-6 col-lg-6 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
                                 <i class="icon-trophy"></i>
                             </div>
                             <div class="feature-content">
                                 <h5><div class="stati18n s18n-service-1-head"></div></h5>
-                                <p id="service-1-description"></p>
+                                <p id="service-1-description"><div class="stati18n s18n-service-1-description"></div></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
-                        <div class="feature-box-1 box-shadow-lg">
-                            <div class="icon">
-                                <i class="icon-heart"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5><div class="stati18n s18n-service-2-head"></div></h5>
-                                <p id="service-2-description"></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="col-sm-6 col-lg-6 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
                                 <i class="icon-speedometer"></i>
                             </div>
                             <div class="feature-content">
                                 <h5><div class="stati18n s18n-service-3-head"></div></h5>
-                                <p id="service-3-description"></p>
+                                <p id="service-3-description"><div class="stati18n s18n-service-3-description"></div></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
-                        <div class="feature-box-1 box-shadow-lg">
-                            <div class="icon">
-                                <i class="icon-chat"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5><div class="stati18n s18n-service-4-head"></div></h5>
-                                <p id="service-4-description"></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="col-sm-6 col-lg-6 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
                                 <i class="icon-book-open"></i>
                             </div>
                             <div class="feature-content">
-                                <h5><div class="stati18n s18n-service-5-head"></div></h5>
-                                <p id="service-5-description"></p>
+                                <h5><div class="stati18n s18n-service-4-head"></div></h5>
+                                <p id="service-4-description"><div class="stati18n s18n-service-4-description"></div></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-4 m-15px-tb">
+                    <div class="col-sm-6 col-lg-6 m-15px-tb">
                         <div class="feature-box-1 box-shadow-lg">
                             <div class="icon">
                                 <i class="icon-happy"></i>
                             </div>
                             <div class="feature-content">
                                 <h5><div class="stati18n s18n-service-6-head"></div></h5>
-                                <p id="service-6-description"></p>
+                                <p id="service-6-description"><div class="stati18n s18n-service-6-description"></div></p>
                             </div>
                         </div>
                     </div>
@@ -1010,7 +273,7 @@
         </section>
         <!-- End services -->
         <!-- Work -->
-        <section id="work" class="section">
+        <section id="work" class="section gray-bg">
             <div class="container">
                 <div class="row sm-m-5px-b m-15px-b">
                     <div class="col-md-12">
@@ -1031,16 +294,16 @@
                 </ul>
             </div>
                 <div class="portfolio-content lightbox-gallery">
-                    <div class="grid-item website">
+                    <div class="grid-item deep">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/Projects/1gegen8.5/1gegen100.png">
+                                <img src="static/img/Projects/MasterThesis/master10.png">
                             </div>
                             <div class="portfolio-info">
-                                <h5 id="onevshundred-heading"></h5>
-                                <span id="onevshundred-subtitle"></span>
+                                <h5 id="hyperspectral-heading"></h5>
+                                <span id="hyperspectral-subtitle"></span>
                             </div>
-                            <a class="link-overlay" data-toggle="modal" href="#onevshundred"></a>
+                            <a class="link-overlay" data-toggle="modal" href="#hyperspectral"></a>
                         </div>
                     </div>
                     <div class="grid-item website">
@@ -1055,6 +318,18 @@
                             <a class="link-overlay" data-toggle="modal" href="#autoloop"></a>
                         </div>
                     </div>
+                    <div class="grid-item website">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/Projects/1gegen8.5/1gegen100.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5 id="onevshundred-heading"></h5>
+                                <span id="onevshundred-subtitle"></span>
+                            </div>
+                            <a class="link-overlay" data-toggle="modal" href="#onevshundred"></a>
+                        </div>
+                    </div>
                     <div class="grid-item website deep">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
@@ -1065,54 +340,6 @@
                                 <span id="hateblock-subtitle"></span>
                             </div>
                             <a class="link-overlay" data-toggle="modal" href="#hateblock"></a>
-                        </div>
-                    </div>
-                    <div class="grid-item iot">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/Projects/SmartHome/hisense-smart-tv.png">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5 id="filterlist-heading"></h5>
-                                <span id="filterlist-subtitle"></span>
-                            </div>
-                            <a class="link-overlay" data-toggle="modal" href="#filterlist"></a>
-                        </div>
-                    </div>
-                    <div class="grid-item website game deep">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/Projects/Pokerbot/blockstamp.png">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5 id="pokerbot-heading"></h5>
-                                <span id="pokerbot-subtitle"></span>
-                            </div>
-                            <a class="link-overlay" data-toggle="modal" href="#pokerbot"></a>
-                        </div>
-                    </div>
-                    <div class="grid-item deep">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/Projects/MasterThesis/master10.png">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5 id="hyperspectral-heading"></h5>
-                                <span id="hyperspectral-subtitle"></span>
-                            </div>
-                            <a class="link-overlay" data-toggle="modal" href="#hyperspectral"></a>
-                        </div>
-                    </div>
-                    <div class="grid-item deep">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/Projects/Planesnet/planes.png">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5 id="planes-heading"></h5>
-                                <span id="planes-subtitle"></span>
-                            </div>
-                            <a class="link-overlay" data-toggle="modal" href="#planes"></a>
                         </div>
                     </div>
                     <div class="grid-item website">
@@ -1127,10 +354,58 @@
                             <a class="link-overlay" data-toggle="modal" href="#website"></a>
                         </div>
                     </div>
+                    <div class="grid-item website game deep">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/Projects/Pokerbot/blockstamp.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5 id="pokerbot-heading"></h5>
+                                <span id="pokerbot-subtitle"></span>
+                            </div>
+                            <a class="link-overlay" data-toggle="modal" href="#pokerbot"></a>
+                        </div>
+                    </div>
+                    <div class="grid-item website game">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/Projects/Wurzelimperium/Garden.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5 id="wurzelimperium-heading"></h5>
+                                <span id="wurzelimperium-subtitle"></span>
+                            </div>
+                            <a class="link-overlay" data-toggle="modal" href="#wurzelimperium"></a>
+                        </div>
+                    </div>
+                    <div class="grid-item deep">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/Projects/Planesnet/planes.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5 id="planes-heading"></h5>
+                                <span id="planes-subtitle"></span>
+                            </div>
+                            <a class="link-overlay" data-toggle="modal" href="#planes"></a>
+                        </div>
+                    </div>
+                    <div class="grid-item iot">
+                        <div class="portfolio-box-01">
+                            <div class="portfolio-img">
+                                <img src="static/img/Projects/SmartHome/hisense-smart-tv.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h5 id="filterlist-heading"></h5>
+                                <span id="filterlist-subtitle"></span>
+                            </div>
+                            <a class="link-overlay" data-toggle="modal" href="#filterlist"></a>
+                        </div>
+                    </div>
                     <div class="grid-item website">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/Projects/BunterAbend/bunterabend.png">
+                                <img src="static/img/Projects/BunterAbend/buntershort.png">
                             </div>
                             <div class="portfolio-info">
                                 <h5 id="talentshow-heading"></h5>
@@ -1166,7 +441,7 @@
                     <div class="grid-item website">
                         <div class="portfolio-box-01">
                             <div class="portfolio-img">
-                                <img src="static/img/Projects/Pinnwand/pinnwand.png">
+                                <img src="static/img/Projects/Pinnwand/pinnshort.png">
                             </div>
                             <div class="portfolio-info">
                                 <h5 id="pinboard-heading"></h5>
@@ -1199,30 +474,17 @@
                             <a class="link-overlay" data-toggle="modal" href="#rumble"></a>
                         </div>
                     </div>
-                    <div class="grid-item website game">
-                        <div class="portfolio-box-01">
-                            <div class="portfolio-img">
-                                <img src="static/img/Projects/Wurzelimperium/Garden.png">
-                            </div>
-                            <div class="portfolio-info">
-                                <h5 id="wurzelimperium-heading"></h5>
-                                <span id="wurzelimperium-subtitle"></span>
-                            </div>
-                            <a class="link-overlay" data-toggle="modal" href="#wurzelimperium"></a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
         <!-- End work -->
         <!-- Testimonials -->
-        <section id="certificates" class="section gray-bg">
+        <section id="certificates" class="section">
             <div class="container">
                 <div class="row sm-m-25px-b m-35px-b">
                     <div class="col-md-12">
                         <div class="section-title">
-                            <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-certificates"></div></h3>
-                            <p class="small" id="certificates-description"></p>
+                            <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-certificates"></div>(<a target='_blank' href='https://www.credly.com/users/daniel-rychlewski/'>Credly</a>, <a target='_blank' href='https://v2.credential.net/profile/danielrychlewski305822/wallet'>GCP</a>)</h3>
                         </div>
                     </div>
                 </div>
@@ -1230,232 +492,172 @@
                     <!-- certificates -->
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/aws-summit-logo.png">
-                            </div>
                             <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-aws-2020"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/awsSummit2020.png">Download</a>
-                                    <span>17.06.2020</span>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/azure/expert-architect.png">
                                 </div>
-                                <p><div class="stati18n s18n-certificate-aws-2020-description"></div></p>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/azure/expert-teamsvoiceengineer.png">
+                                </div>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/azure/expert-devopsengineer.png">
+                                </div>
+                                <div class="tc-info">
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-azure-expert"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/expert%20architect%20AZ-305.pdf">AZ-305 (Architect)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/expert%20teams%20MS-720.pdf">MS-720 (Teams)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/expert%20devops%20AZ-400.pdf">AZ-400 (DevOps)</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/seal-csm.png">
-                            </div>
                             <div class="media-body p-25px-l">
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-ai-engineer.png"></div>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-data-scientist.png"></div>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-power.png"></div>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-admin.png"></div>
+                                <br>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-dynamics.png"></div>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-teams.png"></div>
+                                <div style="display: inline-block; width: 80px; height: 80px;"><img src="static/img/Certificates/azure/associate-security.png"></div>
                                 <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-csm"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/CSM.pdf">Download</a>
-                                    <span>04.05.2020</span>
-                                    <a target="_blank" href="http://bcert.me/saituhxbd">BadgeCert</a>
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-azure-associate"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20ai%20AI-102.pdf">AZ-305 (AI Engineer)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20data%20scientist%20DP-100.pdf">DP-100 (Data Scientist)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20power%20PL-100.pdf">PL-100 (Power Platform)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20admin%20AZ-104.pdf">AZ-104 (Admin)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20dynamics%20MB-240.pdf">MB-240 (Dynamics)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20teams%20MS-700.pdf">MS-700 (Teams)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/azure/associate%20security%20SC-200.pdf">SC-200 (Security)</a>
                                 </div>
-                                <p><div class="stati18n s18n-certificate-csm-description"></div></p>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/gitIcon.png">
-                            </div>
                             <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-git"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/bbvGit.pdf">Download</a>
-                                    <span>04.05.2020</span>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/scrum/psm2.png">
                                 </div>
-                                <p id="git-certificate"><div class="stati18n s18n-certificate-git-description"></div></p>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/scrum/psm1.png">
+                                </div>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/scrum/seal-csm.png">
+                                </div>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/scrum/pspo1.png">
+                                </div>
+                                <div class="tc-info">
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-scrum"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/scrum/psm2.pdf">PSM 2</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/scrum/psm1.pdf">PSM 1</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/scrum/CSM.pdf">ScrumMaster</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/scrum/pspo1.pdf">PSPO 1</a>
+                                    <br>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/itil/foundation.pdf">ITIL Foundation</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/prince2/practitioner.pdf">PRINCE2 Agile Practitioner</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/oracle-cloud-infrastructure-foundations-2020-certified-associate.png">
-                            </div>
                             <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-oci"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/OCI.pdf">Download</a>
-                                    <span>17.04.2020</span>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/oci/architectprofessional.jpg">
                                 </div>
-                                <p><div class="stati18n s18n-certificate-oci-description"></div></p>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/oci/developer.jpg">
+                                </div>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/oci/cloudoperations.jpg">
+                                </div>
+                                <div style="display: inline-block; width: 115px; height: 115px;">
+                                    <img src="static/img/Certificates/oci/autonomousdatabase.jpg">
+                                </div>
+                                <div class="tc-info">
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-oci"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/oci/architect.pdf">Architect Professional</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/oci/developer.pdf">Developer Associate</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/oci/cloudoperations.pdf">Cloud Operations Associate</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/oci/autonomousdatabase.pdf">Autonomous Database Specialist</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/pcap-31-02-pcap-certified-associate-in-python-programming.png">
-                            </div>
                             <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-pcap"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/PCAP.pdf">Download</a>
-                                    <span>19.09.2019</span>
+                                <div style="display: inline-block; width: 120px; height: 120px;">
+                                    <img src="static/img/Certificates/java/Oracle_Java_SE_11_Developer.jpg">
                                 </div>
-                                <p><div class="stati18n s18n-certificate-pcap-description"></div></p>
+                                <div style="display: inline-block; width: 120px; height: 120px;">
+                                    <img src="static/img/Certificates/java/oracle-certified-associate-java-se-8-programmer.png">
+                                </div>
+                                <div style="display: inline-block; width: 120px; height: 120px;">
+                                    <img src="static/img/Certificates/java/oracle-certified-professional-java-se-8-programmer.png">
+                                </div>
+                                <div class="tc-info">
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-ocp11"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/java/Oracle%20Certified%20Professional%201z0-817.pdf">1Z0-817</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/java/Oracle%20Certified%20Professional%201z0-819.pdf">1Z0-819</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/java/OCP.pdf">1Z0-808</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/java/OCA.pdf">1Z0-809</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/c++/CPA.pdf">C++</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/python/PCAP.pdf">Python</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/oracle-certified-professional-java-se-8-programmer.png">
-                            </div>
                             <div class="media-body p-25px-l">
+                                <div style="display: inline-block; width: 120px; height: 120px;"><img src="static/img/Certificates/isqb/iSAQB.png"></div>
+                                <div style="display: inline-block; width: 120px; height: 120px;"><img src="static/img/Certificates/isqb/iSTQB.png"></div>
                                 <div class="tc-info">
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <img id="ocp-logo" src="static/img/Certificates/OCP-JavaSE8-Programmer-clr-30.bmp">
-                                            </td>
-                                            <td>
-                                                <table>
-                                                    <tr><td><a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/OCP.pdf">Download</a></td></tr>
-                                                    <tr><td><span>16.04.2018</span></td></tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-isqb"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/isqb/iSAQB.pdf">iSAQB (Architecture)</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/isqb/iSTQB.pdf">iSTQB (Testing)</a>
                                 </div>
-                                <p><div class="stati18n s18n-certificate-ocp-description"></div></p>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/oracle-certified-associate-java-se-8-programmer.png">
+                            <div style="display: inline-block; width: 80px; height: 80px;">
+                                <img src="static/img/Certificates/cep/cep.png">
                             </div>
                             <div class="media-body p-25px-l">
                                 <div class="tc-info">
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <img id="oca-logo" src="static/img/Certificates/O_Java-SE-8-OCA-clr-30.bmp">
-                                            </td>
-                                            <td>
-                                                <table>
-                                                    <tr><td><a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/OCA.pdf">Download</a></td></tr>
-                                                    <tr><td><span>20.10.2017</span></td></tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                    <h6 class="font-alt dark-color font-w-600 pb-2 pt-3"><div class="stati18n s18n-certificate-cep"></div></h6>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/cep/cep.jpeg">Download</a>
                                 </div>
-                                <p><div class="stati18n s18n-certificate-oca-description"></div></p>
                             </div>
                         </div>
                     </div>
+
                     <div class="testimonial-col-01">
                         <div class="media">
                             <div class="img">
-                                <img src="static/img/Certificates/Deutschlandstipendium.png">
+                                <img src="static/img/Certificates/scholarships/Deutschlandstipendium.png">
                             </div>
                             <div class="media-body p-25px-l">
                                 <div class="tc-info">
                                     <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-deutschlandstipendium"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/Deutschlandstipendium.pdf">Download</a>
+                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/scholarships/Deutschlandstipendium.pdf">Download</a>
                                     <span>04.2018 – 09.2019</span>
                                 </div>
                                 <p><div id="certificate-deutschlandstipendium-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/e-fellows.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-efellows"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/e-fellows.pdf">Download</a>
-                                    <span>12.2017 – 12.2019</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-efellows-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/unicerthulogo.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-unicert"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/UNIcert.pdf">Download</a>
-                                    <span>27.07.2017</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-unicert-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/Matlab.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-matlab"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/Onramp.pdf">Download</a>
-                                    <span>23.02.2017</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-matlab-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/network.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-network"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/Netzwerksicherheit.pdf">Download</a>
-                                    <span>20.06.2016</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-network-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/Tenniscamp.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-tennis-2"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/Tenniscamp.pdf">Download</a>
-                                    <span>11.09.2015</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-tennis-2-description"></div></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-col-01">
-                        <div class="media">
-                            <div class="img">
-                                <img src="static/img/Certificates/Ehrenurkunde.png">
-                            </div>
-                            <div class="media-body p-25px-l">
-                                <div class="tc-info">
-                                    <h6 class="font-alt dark-color font-w-600"><div class="stati18n s18n-certificate-tennis-1"></div></h6>
-                                    <a target="_blank" class="btn btn-sm btn-outline-primary" href="static/pdf/Certificates/Ehrenurkunde.pdf">Download</a>
-                                    <span>07.08.2015</span>
-                                </div>
-                                <p><div class="stati18n s18n-certificate-tennis-1-description"></div></p>
+                                <p>Other scholarships: <a target="_blank" href="static/pdf/Certificates/scholarships/e-fellows.pdf">e-fellows</a></p>
                             </div>
                         </div>
                     </div>
@@ -1463,13 +665,12 @@
             </div>
         </section>
         <!-- End Testimonials -->
-        <section id="contact" class="section white-bg">
+        <section id="contact" class="section gray-bg">
             <div class="container">
                 <div class="row sm-m-25px-b m-35px-b">
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase"><div class="stati18n s18n-chapter-name-get-in-touch"></div></h3>
-                            <p class="small"><div class="stati18n s18n-get-in-touch-text"></div></p>
                         </div>
                     </div>
                 </div>
@@ -1496,22 +697,6 @@
         </section>
     </main>
 
-    <div class="modal fade" id="skills-csv" role="dialog">
-        <div class="modal-dialog modal-xxl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="skills-modal-heading"></h4>
-                    <span style="float: right;">
-                        <a target="_blank" id="copyToClipboardButton" onclick="copySkillsToClipboard()" class="btn btn-primary"><div class="stati18n s18n-copy-skills"></div></a>
-                    </span>
-                </div>
-                <div class="modal-body" id="skills-text"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="skills-close"></button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="onevshundred" role="dialog">
         <div class="modal-dialog modal-xxl">
             <div class="modal-content">
@@ -1787,11 +972,6 @@
                         <a target="_blank" href="https://www.linkedin.com/in/daniel-rychlewski/"><i class="fab fa-linkedin-in"></i></a>
                         <a target="_blank" href="https://www.xing.com/profile/Daniel_Rychlewski/"><i class="fab fa-xing"></i></a>
                         <a target="_blank" href="https://github.com/daniel-rychlewski"><i class="fab fa-github"></i></a>
-                        <a target="_blank" href="https://www.facebook.com/daniel.rychlewski/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://twitter.com/dan_rychl"><i class="fab fa-twitter"></i></a>
-                        <a target="_blank" href="https://www.reddit.com/user/danielrychlewski"><i class="fab fa-reddit"></i></a>
-                        <a target="_blank" href="https://www.quora.com/profile/Daniel-Rychlewski-1"><i class="fab fa-quora"></i></a>
-                        <a target="_blank" href="https://www.instagram.com/daniel.rychlewski/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-2 m-10px-tb text-center text-md-center">
@@ -1826,8 +1006,6 @@
     <script src="static/js/custom.js"></script>
     <script src="style-switcher/style-switcher.js"></script>
     <link rel="stylesheet" href="style-switcher/style-switcher.css">
-    <script type="text/javascript">initSkillSearch()</script>
-    <script type="text/javascript">enableLongtapForTitles()</script>
     <!-- end body -->
 </body>
 
