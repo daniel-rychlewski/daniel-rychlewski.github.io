@@ -20,7 +20,7 @@
         <text id="chapter-link-about-me">
             <translation lang='en'>About me</translation>
             <translation lang='de'>Über mich</translation>
-            <translation lang='pl'>O mnie</translation>
+            <translation lang='pl'>Profil</translation>
         </text>
         <text id="chapter-link-skills">
             <translation lang='en'>Skills</translation>
@@ -30,7 +30,7 @@
         <text id="chapter-link-added-value">
             <translation lang='en'>Added value</translation>
             <translation lang='de'>Mehrwert</translation>
-            <translation lang='pl'>Wartość dodana</translation>
+            <translation lang='pl'>Wartość</translation>
         </text>
         <text id="chapter-link-portfolio">
             <translation lang='en'>Hobby projects</translation>
